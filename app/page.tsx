@@ -1,65 +1,389 @@
-import Image from "next/image";
+"use client"
+
+import { useState, useMemo } from "react"
+import players from "@/data/players.json"
+import playerPool from "@/data/playerPool.json"
+
+type Player = any
 
 export default function Home() {
+  const allPlayers = players as Player[]
+  const pool = playerPool as any[]
+
+  const [query, setQuery] = useState("")
+  const [guesses, setGuesses] = useState<Player[]>([])
+  const [gameOver, setGameOver] = useState(false)
+  const [won, setWon] = useState(false)
+  const [showModal, setShowModal] = useState(false)
+
+  // ✅ Target from playerPool (random)
+  const [target] = useState<Player>(() => {
+    const poolIds = new Set(pool.map((p) => p.playerId))
+    const poolPlayers = allPlayers.filter((p) => poolIds.has(p.id))
+    if (!poolPlayers.length) return allPlayers[0]
+    return poolPlayers[Math.floor(Math.random() * poolPlayers.length)]
+  })
+
+  const numericKeys = ["age", "draftPick", "draftYear", "jersey_number"]
+
+  const categoryKeys = [
+    "name",
+    "position",
+    "team",
+    "age",
+    "college",
+    "draftPick",
+    "draftYear",
+    "jersey_number",
+    "draftTeam"
+  ]
+
+  // ✅ Search (full DB)
+  const filteredPlayers = useMemo(() => {
+    if (!query) return []
+    return allPlayers
+      .filter((p) =>
+        p.name.toLowerCase().includes(query.toLowerCase())
+      )
+      .slice(0, 7)
+  }, [query, allPlayers])
+
+  const handleSelectPlayer = (player: Player) => {
+    if (gameOver) return
+
+    setGuesses((prev) => {
+      if (prev.find((p) => p.id === player.id)) return prev
+      if (prev.length >= 8) return prev
+
+      const updated = [...prev, player]
+
+      if (player.id === target.id) {
+        setWon(true)
+        setGameOver(true)
+        setShowModal(true)
+      }
+
+      if (updated.length === 8 && player.id !== target.id) {
+        setGameOver(true)
+        setShowModal(true)
+      }
+
+      return updated
+    })
+
+    setQuery("")
+  }
+
+  function getCellStyle(key: string, guessVal: any, targetVal: any) {
+    if (guessVal == null || targetVal == null) {
+      return { background: "#111", color: "#fff", arrow: "" }
+    }
+
+    // Array match (position)
+    if (Array.isArray(guessVal) && Array.isArray(targetVal)) {
+      if (guessVal.some((g) => targetVal.includes(g))) {
+        return { background: "#16a34a", color: "#fff", arrow: "" }
+      }
+    }
+
+    // Exact match
+    if (guessVal === targetVal) {
+      return { background: "#16a34a", color: "#fff", arrow: "" }
+    }
+
+    // Numeric logic
+    if (numericKeys.includes(key)) {
+      const g = Number(guessVal)
+      const t = Number(targetVal)
+
+      if (!isNaN(g) && !isNaN(t)) {
+        const diff = Math.abs(g - t)
+
+        if (diff <= 2) {
+          return {
+            background: "#eab308",
+            color: "#000",
+            arrow: g < t ? "↑" : "↓"
+          }
+        }
+
+        return {
+          background: "#1f2937",
+          color: "#9ca3af",
+          arrow: g < t ? "↑" : "↓"
+        }
+      }
+    }
+
+    return { background: "#1f2937", color: "#9ca3af", arrow: "" }
+  }
+
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <div style={{ background: "#0a0a0a", minHeight: "100vh", color: "#fff" }}>
+      
+      {/* HEADER */}
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "space-between",
+          padding: "12px 16px",
+          borderBottom: "1px solid #222"
+        }}
+      >
+        <div style={{ color: "#14b8a6", fontWeight: 700 }}>PlayrIQ</div>
+        <div style={{ display: "flex", gap: 16 }}>
+          <a href="/about">About</a>
+          <a href="/how-to-play">How to Play</a>
+          <a href="/faq">FAQ</a>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </div>
+
+      <div style={{ maxWidth: 1100, margin: "0 auto", padding: 16 }}>
+        
+        {/* LOGO */}
+        <div style={{ display: "flex", justifyContent: "center", marginBottom: 10 }}>
+          <img src="/main_logo.png" style={{ width: 200 }} />
         </div>
-      </main>
+
+        {/* SUBTITLE */}
+        <p style={{ textAlign: "center", color: "#aaa", marginBottom: 16 }}>
+          Guess the player in 8 tries or less
+        </p>
+
+        {/* LEGEND */}
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            gap: 10,
+            marginBottom: 20
+          }}
+        >
+          {[
+            { color: "#16a34a", text: "Correct" },
+            { color: "#eab308", text: "Close" },
+            { color: "#6b7280", text: "Incorrect" }
+          ].map((item) => (
+            <div
+              key={item.text}
+              style={{
+                border: `2px solid ${item.color}`,
+                padding: "6px 12px",
+                borderRadius: 6,
+                fontSize: 12,
+                color: item.color
+              }}
+            >
+              {item.text}
+            </div>
+          ))}
+        </div>
+
+        {/* SEARCH */}
+        <div style={{ position: "relative" }}>
+          <input
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
+            placeholder="Search player..."
+            disabled={gameOver}
+            style={{
+              width: "100%",
+              padding: 14,
+              borderRadius: 10,
+              border: "1px solid #14b8a6",
+              background: "#111",
+              color: "#fff"
+            }}
+          />
+
+          {/* DROPDOWN */}
+          {query && filteredPlayers.length > 0 && (
+            <div
+              style={{
+                position: "absolute",
+                width: "100%",
+                background: "#111",
+                border: "1px solid #14b8a6",
+                borderRadius: 10,
+                marginTop: 6,
+                zIndex: 10
+              }}
+            >
+              {filteredPlayers.map((p) => (
+                <div
+                  key={p.id}
+                  onClick={() => handleSelectPlayer(p)}
+                  style={{ padding: 12, cursor: "pointer" }}
+                >
+                  {p.name}
+                </div>
+              ))}
+            </div>
+          )}
+        </div>
+
+        {/* GIVE UP BUTTON */}
+        <div style={{ display: "flex", justifyContent: "center", margin: "16px 0" }}>
+          <button
+            onClick={() => {
+              setGameOver(true)
+              setShowModal(true)
+            }}
+            disabled={gameOver}
+            style={{
+              padding: "10px 16px",
+              background: "#14b8a6",
+              color: "#000",
+              border: "none",
+              borderRadius: 8,
+              fontWeight: 600,
+              cursor: "pointer",
+              opacity: gameOver ? 0.6 : 1
+            }}
+          >
+            Give Up
+          </button>
+        </div>
+
+        {/* TABLE */}
+        <div style={{ overflowX: "auto" }}>
+          <table
+            style={{
+              width: "100%",
+              borderCollapse: "separate",
+              borderSpacing: "0 12px"
+            }}
+          >
+            <thead>
+              <tr>
+                {[
+                  "Player",
+                  "Position",
+                  "Team",
+                  "Age",
+                  "College",
+                  "Draft Pick",
+                  "Draft Year",
+                  "Jersey #",
+                  "Drafted Team"
+                ].map((col, idx) => (
+                  <th
+                    key={col}
+                    style={{
+                      color: "#14b8a6",
+                      fontSize: 12,
+                      textAlign: "left",
+                      padding: "0 8px 6px 8px",
+                      minWidth: idx === 0 ? 180 : 110
+                    }}
+                  >
+                    {col}
+                  </th>
+                ))}
+              </tr>
+            </thead>
+
+            <tbody>
+              {[...Array(8)].map((_, i) => {
+                const player = guesses[i]
+
+                const values = [
+                  player?.name,
+                  player?.position?.[0],
+                  player?.team,
+                  player?.age,
+                  player?.college,
+                  player?.draftPick,
+                  player?.draftYear,
+                  player?.jersey_number,
+                  player?.draftTeam
+                ]
+
+                return (
+                  <tr key={i}>
+                    {values.map((val, idx) => {
+                      const key = categoryKeys[idx]
+                      const style =
+                        player && target
+                          ? getCellStyle(key, player[key], target[key])
+                          : { background: "#111", color: "#fff", arrow: "" }
+
+                      return (
+                        <td
+                          key={idx}
+                          style={{
+                            background: style.background,
+                            color: style.color,
+                            border: "1px solid #222",
+                            padding: 16,
+                            borderRadius: 10,
+                            minWidth: idx === 0 ? 180 : 110,
+                            height: 60
+                          }}
+                        >
+                          <div style={{ display: "flex", justifyContent: "space-between" }}>
+                            <span>{val}</span>
+                            {style.arrow && <span>{style.arrow}</span>}
+                          </div>
+                        </td>
+                      )
+                    })}
+                  </tr>
+                )
+              })}
+            </tbody>
+          </table>
+        </div>
+
+        {/* MODAL */}
+        {showModal && (
+          <div
+            style={{
+              position: "fixed",
+              top: 0,
+              left: 0,
+              width: "100%",
+              height: "100%",
+              background: "rgba(0,0,0,0.8)",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center"
+            }}
+          >
+            <div
+              style={{
+                background: "#111",
+                padding: 20,
+                borderRadius: 12,
+                width: "90%",
+                maxWidth: 400,
+                border: "1px solid #14b8a6"
+              }}
+            >
+              <h2 style={{ color: "#14b8a6" }}>
+                {won ? "You got it!" : "Player Revealed"}
+              </h2>
+
+              <p><strong>{target.name}</strong></p>
+              <p>{target.position?.[0]} - {target.team}</p>
+
+              <button
+                onClick={() => setShowModal(false)}
+                style={{
+                  marginTop: 10,
+                  padding: 10,
+                  width: "100%",
+                  background: "#14b8a6",
+                  border: "none",
+                  borderRadius: 8
+                }}
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        )}
+      </div>
     </div>
-  );
+  )
 }
