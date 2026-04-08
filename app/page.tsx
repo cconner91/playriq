@@ -107,14 +107,14 @@ export default function Home() {
           return {
             background: "#eab308",
             color: "#000",
-            arrow: g < t ? "↑" : "↓"
+            arrow: g < t ? "⬆" : "⬇"
           }
         }
 
         return {
           background: "#1f2937",
           color: "#9ca3af",
-          arrow: g < t ? "↑" : "↓"
+          arrow: g < t ? "⬆" : "⬇"
         }
       }
     }
@@ -148,16 +148,19 @@ export default function Home() {
         </div>
 
         {/* SUBTITLE */}
-        <p style={{ textAlign: "center", color: "#aaa", marginBottom: 16 }}>
-          Guess the player in 8 tries or less
+        <p style={{ textAlign: "center", fontSize: 16, color: "#ffffffff", marginBottom: 25 }}>
+          Guess the player in 8 tries or less 
+        </p>
+        <p style={{ textAlign: "center", fontSize: 12, color: "#aaaaaacd", marginBottom: 8 }}>
+          The attribute/statistic of each guess will be reflected with the following colors:
         </p>
 
         {/* LEGEND */}
         <div style={{
           display: "flex",
           justifyContent: "center",
-          gap: 10,
-          marginBottom: 20,
+          gap: 6,
+          marginBottom: 30,
           flexWrap: "wrap"
         }}>
           {[
@@ -169,7 +172,7 @@ export default function Home() {
               border: `2px solid ${item.color}`,
               padding: "6px 12px",
               borderRadius: 6,
-              fontSize: 12,
+              fontSize: 10,
               color: item.color
             }}>
               {item.text}
@@ -181,53 +184,115 @@ export default function Home() {
         <div style={{ marginBottom: 16 }}>
 
           <div style={{ textAlign: "center", fontSize: 12, color: "#888", marginBottom: 6 }}>
-            League
+            Select a League
           </div>
 
           <div style={{ display: "flex", justifyContent: "center", gap: 8, flexWrap: "wrap" }}>
-            {["NFL"].map((league) => (
+            {[
+              { name: "NFL", logo: "/nfl_logo.png", enabled: true },
+              { name: "NBA", logo: "/nba_logo.png", enabled: false },
+              { name: "MLB", logo: "/mlb_logo.png", enabled: false },
+
+            
+            ].map((league) => (
               <button
-                key={league}
-                onClick={() => setSelectedLeague(league)}
+                key={league.name}
+                onClick={() => league.enabled && setSelectedLeague(league.name)}
                 style={{
-                  padding: "8px 14px",
+                  display: "flex",
+                  alignItems: "center",
+                  gap: 6,
+                  padding: "8px 12px",
                   borderRadius: 8,
                   border: "1px solid #14b8a6",
-                  background: selectedLeague === league ? "#14b8a6" : "transparent",
-                  color: selectedLeague === league ? "#000" : "#14b8a6",
+                  background: 
+                    selectedLeague === league.name ? "#14b8a6" : "transparent",
+                  color: 
+                    selectedLeague === league.name ? "#000" : "#14b8a6",
+                  opacity: league.enabled ? 1 : 0.5,
+                  cursor: league.enabled ? "pointer" : "not-allowed",
                   fontWeight: 600
                 }}
               >
-                {league}
-              </button>
+                <img src={league.logo} style={{ width: 16, height: 16 }} />
+                  {league.name}
+                  {!league.enabled && (
+                  <span style={{ fontSize: 10, marginLeft: 4 }}>
+                  </span>
+                    )}
+            </button>
             ))}
           </div>
 
           <div style={{ textAlign: "center", fontSize: 12, color: "#888", margin: "10px 0 6px" }}>
-            Difficulty
+            Choose Difficulty
           </div>
 
-          <div style={{ display: "flex", justifyContent: "center", gap: 8, flexWrap: "wrap" }}>
-            {[1,2,3].map((d) => (
-              <button
-                key={d}
-                onClick={() => setSelectedDifficulty(d)}
-                style={{
-                  padding: "8px 14px",
-                  borderRadius: 8,
-                  border: "1px solid #14b8a6",
-                  background: selectedDifficulty === d ? "#14b8a6" : "transparent",
-                  color: selectedDifficulty === d ? "#000" : "#14b8a6",
-                  fontWeight: 600
-                }}
-              >
-                {d === 1 ? "Easy" : d === 2 ? "Medium" : "Hard"}
-              </button>
-            ))}
-          </div>
-        </div>
+          <div
+          style={{
+          position: "relative", // 🔥 enables absolute positioning
+          margin: "16px 0"
+            }}
+          >
 
-        {/* SEARCH */}
+  {/* Difficulty Buttons (centered, untouched) */}
+  <div
+    style={{
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+      gap: 14,
+      flexWrap: "wrap"
+    }}
+  >
+    {[1, 2, 3].map((d) => (
+      <button
+        key={d}
+        onClick={() => setSelectedDifficulty(d)}
+        style={{
+          padding: "10px 14px",
+          borderRadius: 10,
+          border: "1px solid #14b8a6",
+          background:
+            selectedDifficulty === d ? "#14b8a6" : "transparent",
+          color:
+            selectedDifficulty === d ? "#000" : "#14b8a6",
+          fontWeight: 600
+        }}
+      >
+        {d === 1 ? "Easy" : d === 2 ? "Medium" : "Hard"}
+      </button>
+    ))}
+  </div>
+  </div>
+
+  {/* Give Up (independent position) */}
+  <button
+    onClick={() => {
+      const confirmed = confirm("Are you sure you want to give up?")
+      if (!confirmed) return
+
+      setGameOver(true)
+      setShowModal(true)
+    }}
+    style={{
+      position: "relative",
+      maxWidth: 400,
+      margin: "16px auto",
+      top: "50%",
+      transform: "translateY(-50%)",
+
+      padding: "14px 16px", 
+      borderRadius: 10,
+      border: "1px solid #727272ff",
+      background: "#c76a64ff",
+      color: "#ffffffff",
+      fontWeight: 600
+    }}
+  >
+    Give Up 😩
+  </button>
+</div>
         <div style={{ position: "relative" }}>
           <input
             value={query}
@@ -260,93 +325,143 @@ export default function Home() {
             </div>
           )}
         </div>
-
-        {/* GIVE UP */}
-        <div style={{ display: "flex", justifyContent: "center", margin: "16px 0" }}>
-          <button
-            onClick={() => {
-              setGameOver(true)
-              setShowModal(true)
-            }}
+        {/* TABLE */}
+        <div style={{ width: "100%", overflowX: "auto" }}>
+  <table
+    style={{
+      width: "100%",
+      borderCollapse: "separate",
+      borderSpacing: "6px 10px",
+      tableLayout: "fixed"
+    }}
+  >
+    <thead>
+      <tr>
+        {[
+          { label: "Player", width: "30%" },
+          { label: "Team", width: "10%" },
+          { label: "Position", width: "8%" },
+          { label: "Age", width: "9%" },
+          { label: "College", width: "13%" },
+          { label: "Draft Year", width: "9%" },
+          { label: "Draft Pick", width: "9%" },
+          { label: "Jersey #", width: "9%" }
+        ].map((col) => (
+          <th
+            key={col.label}
             style={{
-              padding: "10px 16px",
-              background: "#14b8a6",
-              color: "#000",
-              borderRadius: 8
+              width: col.width,
+              fontSize: 12,
+              color: "#14b8a6",
+              textAlign: "center",
+              padding: "4px 6px"
             }}
           >
-            Give Up
-          </button>
-        </div>
+            {col.label}
+          </th>
+        ))}
+      </tr>
+    </thead>
 
-        {/* TABLE */}
-        <div style={{ width: "100%", overflowX: "hidden" }}>
-          <table style={{
-            width: "100%",
-            tableLayout: "fixed",
-            borderCollapse: "separate",
-            borderSpacing: "0 8px"
-          }}>
-            <thead>
-              <tr>
-                {["Player","Position","Team","Age","College","Draft Pick","Draft Year","Jersey #","Drafted Team"].map((h,i)=>(
-                  <th key={h} style={{
-                    fontSize:11,
-                    padding:"4px",
-                    color:"#14b8a6"
-                  }}>{h}</th>
-                ))}
-              </tr>
-            </thead>
+    <tbody>
+      {[...Array(8)].map((_, i) => {
+        const player = guesses[i]
 
-            <tbody>
-              {[...Array(8)].map((_, i) => {
-                const player = guesses[i]
+        const values = [
+          player?.name,
+          player?.team,
+          player?.position?.[0],
+          player?.age,
+          player?.college.split(";").pop().trim(),
+          player?.draftYear,
+          player?.draftPick,
+          player?.jersey_number
+        ]
 
-                const values = [
-                  player?.name,
-                  player?.position?.[0],
-                  player?.team,
-                  player?.age,
-                  player?.college,
-                  player?.draftPick,
-                  player?.draftYear,
-                  player?.jersey_number,
-                  player?.draftTeam
-                ]
+        return (
+          <tr key={i}>
+            {values.map((val, idx) => {
+              const key = [
+                "name",
+                "position",
+                "team",
+                "age",
+                "college",
+                "draftPick",
+                "draftYear",
+                "jersey_number"
+              ][idx]
 
-                return (
-                  <tr key={i}>
-                    {values.map((val, idx) => {
-                      const key = ["name","position","team","age","college","draftPick","draftYear","jersey_number","draftTeam"][idx]
-                      const style =
-                        player && target
-                          ? getCellStyle(key, player[key], target[key])
-                          : { background:"#111", color:"#fff", arrow:"" }
+              const style =
+                player && target
+                  ? getCellStyle(key, player[key], target[key])
+                  : { background: "#111", color: "#fff", arrow: "" }
 
-                      return (
-                        <td key={idx} style={{
-                          padding:10,
-                          fontSize:12,
-                          wordBreak:"break-word",
-                          border:"1px solid #222",
-                          borderRadius:8,
-                          background:style.background,
-                          color:style.color
-                        }}>
-                          <div style={{ display:"flex", justifyContent:"space-between" }}>
-                            <span>{val}</span>
-                            {style.arrow && <span>{style.arrow}</span>}
-                          </div>
-                        </td>
-                      )
-                    })}
-                  </tr>
-                )
-              })}
-            </tbody>
-          </table>
-        </div>
+              return (
+                <td
+                key={idx}
+                style={{
+                  background: style.background,
+                  color: style.color,
+                  border: "1px solid #222",
+                  borderRadius: 10,
+
+            // 🔥 THIS is what actually increases height
+                height: 80,
+                minHeight: 80,
+
+            // spacing inside the cell
+                padding: idx === 0 ? "16px 12px" : "14px 8px",
+
+                fontSize: idx === 0 ? 16 : 13,
+                lineHeight: 1.3,
+
+                verticalAlign: "middle"
+                  }}
+                  >
+                  <div
+                    style={{
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                      position: "relative"
+                    }}
+                  >
+                    <span
+                      style={{
+                        overflow: "hidden",
+                        textOverflow: "ellipsis",
+                        whiteSpace: idx === 0 ? "normal" : "nowrap"
+                      }}
+                    >
+                      {val}
+                    </span>
+
+                    {style.arrow && (
+                      <span 
+                        style={{
+                          position: "absolute",
+                          right: 6,
+                          fontSize: 14,
+                          lineHeight: 1,
+                          display: "flex",
+                          alignItems: "center"
+                        }}
+                        >
+
+                        {style.arrow}
+                      </span>
+                    )}
+                  </div>
+                </td>
+              )
+            })}
+          </tr>
+        )
+      })}
+    </tbody>
+  </table>
+</div>
 
         {/* MODAL */}
         {showModal && target && (
