@@ -31,9 +31,10 @@ export function mapToPlayer(row: any): Player {
 
     passingYards: 0,
     rushingYards: 0,
+    receivingYards: 0,
+    allPurposeYards: 0,
 
     proBowls: 0,
-    allProSeasons: 0,
     superBowlsWon: 0,
 
     gamesPlayed: 0,

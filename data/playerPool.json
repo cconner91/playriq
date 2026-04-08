@@ -1,9 +1,51 @@
 [
   {
-    "playerId": "shaun_hill_nfl",
+    "playerId": "david_carr_nfl",
     "sport": "Football",
     "league": "NFL",
-    "difficulty": 4,
+    "difficulty": 3,
+    "enabled": true
+  },
+  {
+    "playerId": "josh_mccown_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 3,
+    "enabled": true
+  },
+  {
+    "playerId": "patrick_ramsey_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 3,
+    "enabled": true
+  },
+  {
+    "playerId": "tim_hasselbeck_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 3,
+    "enabled": true
+  },
+  {
+    "playerId": "david_garrard_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 3,
+    "enabled": true
+  },
+  {
+    "playerId": "kyle_boller_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 3,
+    "enabled": true
+  },
+  {
+    "playerId": "ken_dorsey_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 3,
     "enabled": true
   },
   {
@@ -14,10 +56,59 @@
     "enabled": true
   },
   {
-    "playerId": "david_carr_nfl",
+    "playerId": "rex_grossman_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 3,
+    "enabled": true
+  },
+  {
+    "playerId": "seneca_wallace_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 3,
+    "enabled": true
+  },
+  {
+    "playerId": "tony_romo_nfl",
     "sport": "Football",
     "league": "NFL",
     "difficulty": 2,
+    "enabled": true
+  },
+  {
+    "playerId": "byron_leftwich_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 3,
+    "enabled": true
+  },
+  {
+    "playerId": "carson_palmer_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 2,
+    "enabled": true
+  },
+  {
+    "playerId": "ben_roethlisberger_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 1,
+    "enabled": true
+  },
+  {
+    "playerId": "philip_rivers_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 1,
+    "enabled": true
+  },
+  {
+    "playerId": "eli_manning_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 1,
     "enabled": true
   },
   {
@@ -28,6 +119,1140 @@
     "enabled": true
   },
   {
+    "playerId": "alex_smith_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 2,
+    "enabled": true
+  },
+  {
+    "playerId": "dan_orlovsky_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 2,
+    "enabled": true
+  },
+  {
+    "playerId": "derek_anderson_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 3,
+    "enabled": true
+  },
+  {
+    "playerId": "ryan_fitzpatrick_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 2,
+    "enabled": true
+  },
+  {
+    "playerId": "kyle_orton_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 3,
+    "enabled": true
+  },
+  {
+    "playerId": "matt_cassel_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 3,
+    "enabled": true
+  },
+  {
+    "playerId": "jason_campbell_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 2,
+    "enabled": true
+  },
+  {
+    "playerId": "charlie_frye_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 3,
+    "enabled": true
+  },
+  {
+    "playerId": "jared_lorenzen_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 3,
+    "enabled": true
+  },
+  {
+    "playerId": "kellen_clemens_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 3,
+    "enabled": true
+  },
+  {
+    "playerId": "vince_young_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 3,
+    "enabled": true
+  },
+  {
+    "playerId": "matt_leinart_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 3,
+    "enabled": true
+  },
+  {
+    "playerId": "jay_cutler_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 1,
+    "enabled": true
+  },
+  {
+    "playerId": "charlie_whitehurst_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 3,
+    "enabled": true
+  },
+  {
+    "playerId": "jamarcus_russell_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 2,
+    "enabled": true
+  },
+  {
+    "playerId": "brady_quinn_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 2,
+    "enabled": true
+  },
+  {
+    "playerId": "kevin_kolb_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 3,
+    "enabled": true
+  },
+  {
+    "playerId": "matt_moore_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 3,
+    "enabled": true
+  },
+  {
+    "playerId": "chad_henne_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 3,
+    "enabled": true
+  },
+  {
+    "playerId": "matt_flynn_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 3,
+    "enabled": true
+  },
+  {
+    "playerId": "matt_ryan_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 1,
+    "enabled": true
+  },
+  {
+    "playerId": "joe_flacco_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 1,
+    "enabled": true
+  },
+  {
+    "playerId": "jordan_palmer_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 3,
+    "enabled": true
+  },
+  {
+    "playerId": "colt_brennan_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 2,
+    "enabled": true
+  },
+  {
+    "playerId": "matthew_stafford_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 1,
+    "enabled": true
+  },
+  {
+    "playerId": "josh_freeman_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 3,
+    "enabled": true
+  },
+  {
+    "playerId": "mark_sanchez_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 2,
+    "enabled": true
+  },
+  {
+    "playerId": "chase_daniel_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 2,
+    "enabled": true
+  },
+  {
+    "playerId": "pat_white_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 3,
+    "enabled": true
+  },
+  {
+    "playerId": "brian_hoyer_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 3,
+    "enabled": true
+  },
+  {
+    "playerId": "thad_lewis_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 3,
+    "enabled": true
+  },
+  {
+    "playerId": "sam_bradford_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 3,
+    "enabled": true
+  },
+  {
+    "playerId": "jimmy_clausen_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 3,
+    "enabled": true
+  },
+  {
+    "playerId": "tim_tebow_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 1,
+    "enabled": true
+  },
+  {
+    "playerId": "blaine_gabbert_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 2,
+    "enabled": true
+  },
+  {
+    "playerId": "tyrod_taylor_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 2,
+    "enabled": true
+  },
+  {
+    "playerId": "cam_newton_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 1,
+    "enabled": true
+  },
+  {
+    "playerId": "jake_locker_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 3,
+    "enabled": true
+  },
+  {
+    "playerId": "ryan_mallett_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 3,
+    "enabled": true
+  },
+  {
+    "playerId": "christian_ponder_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 3,
+    "enabled": true
+  },
+  {
+    "playerId": "colin_kaepernick_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 2,
+    "enabled": true
+  },
+  {
+    "playerId": "andy_dalton_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 2,
+    "enabled": true
+  },
+  {
+    "playerId": "tj_yates_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 3,
+    "enabled": true
+  },
+  {
+    "playerId": "brock_osweiler_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 3,
+    "enabled": true
+  },
+  {
+    "playerId": "robert_griffin_iii_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 1,
+    "enabled": true
+  },
+  {
+    "playerId": "andrew_luck_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 1,
+    "enabled": true
+  },
+  {
+    "playerId": "nick_foles_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 2,
+    "enabled": true
+  },
+  {
+    "playerId": "russell_wilson_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 1,
+    "enabled": true
+  },
+  {
+    "playerId": "kirk_cousins_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 1,
+    "enabled": true
+  },
+  {
+    "playerId": "ryan_tannehill_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 2,
+    "enabled": true
+  },
+  {
+    "playerId": "kellen_moore_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 3,
+    "enabled": true
+  },
+  {
+    "playerId": "case_keenum_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 2,
+    "enabled": true
+  },
+  {
+    "playerId": "brandon_weeden_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 2,
+    "enabled": true
+  },
+  {
+    "playerId": "geno_smith_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 2,
+    "enabled": true
+  },
+  {
+    "playerId": "ej_manuel_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 2,
+    "enabled": true
+  },
+  {
+    "playerId": "mike_glennon_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 3,
+    "enabled": true
+  },
+  {
+    "playerId": "johnny_manziel_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 1,
+    "enabled": true
+  },
+  {
+    "playerId": "teddy_bridgewater_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 2,
+    "enabled": true
+  },
+  {
+    "playerId": "blake_bortles_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 2,
+    "enabled": true
+  },
+  {
+    "playerId": "jimmy_garoppolo_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 2,
+    "enabled": true
+  },
+  {
+    "playerId": "garrett_gilbert_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 3,
+    "enabled": true
+  },
+  {
+    "playerId": "derek_carr_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 1,
+    "enabled": true
+  },
+  {
+    "playerId": "aaron_murray_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 3,
+    "enabled": true
+  },
+  {
+    "playerId": "aj_mccarron_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 3,
+    "enabled": true
+  },
+  {
+    "playerId": "tom_savage_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 3,
+    "enabled": true
+  },
+  {
+    "playerId": "jameis_winston_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 1,
+    "enabled": true
+  },
+  {
+    "playerId": "marcus_mariota_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 2,
+    "enabled": true
+  },
+  {
+    "playerId": "brett_hundley_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 3,
+    "enabled": true
+  },
+  {
+    "playerId": "taylor_heinicke_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 2,
+    "enabled": true
+  },
+  {
+    "playerId": "jared_goff_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 1,
+    "enabled": true
+  },
+  {
+    "playerId": "paxton_lynch_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 3,
+    "enabled": true
+  },
+  {
+    "playerId": "dak_prescott_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 1,
+    "enabled": true
+  },
+  {
+    "playerId": "carson_wentz_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 1,
+    "enabled": true
+  },
+  {
+    "playerId": "jacoby_brissett_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 2,
+    "enabled": true
+  },
+  {
+    "playerId": "cardale_jones_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 2,
+    "enabled": true
+  },
+  {
+    "playerId": "deshone_kizer_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 3,
+    "enabled": true
+  },
+  {
+    "playerId": "patrick_mahomes_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 1,
+    "enabled": true
+  },
+  {
+    "playerId": "deshaun_watson_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 1,
+    "enabled": true
+  },
+  {
+    "playerId": "nick_mullens_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 3,
+    "enabled": true
+  },
+  {
+    "playerId": "joshua_dobbs_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 3,
+    "enabled": true
+  },
+  {
+    "playerId": "mitchell_trubisky_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 2,
+    "enabled": true
+  },
+  {
+    "playerId": "nathan_peterman_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 3,
+    "enabled": true
+  },
+  {
+    "playerId": "chad_kelly_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 3,
+    "enabled": true
+  },
+  {
+    "playerId": "cooper_rush_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 3,
+    "enabled": true
+  },
+  {
+    "playerId": "cj_beathard_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 3,
+    "enabled": true
+  },
+  {
+    "playerId": "sam_darnold_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 1,
+    "enabled": true
+  },
+  {
+    "playerId": "lamar_jackson_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 1,
+    "enabled": true
+  },
+  {
+    "playerId": "josh_allen_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 1,
+    "enabled": true
+  },
+  {
+    "playerId": "kyle_allen_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 3,
+    "enabled": true
+  },
+  {
+    "playerId": "mason_rudolph_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 2,
+    "enabled": true
+  },
+  {
+    "playerId": "baker_mayfield_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 1,
+    "enabled": true
+  },
+  {
+    "playerId": "mike_white_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 3,
+    "enabled": true
+  },
+  {
+    "playerId": "kyler_murray_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 1,
+    "enabled": true
+  },
+  {
+    "playerId": "daniel_jones_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 1,
+    "enabled": true
+  },
+  {
+    "playerId": "dwayne_haskins_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 1,
+    "enabled": true
+  },
+  {
+    "playerId": "drew_lock_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 2,
+    "enabled": true
+  },
+  {
+    "playerId": "jarrett_stidham_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 3,
+    "enabled": true
+  },
+  {
+    "playerId": "gardner_minshew_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 2,
+    "enabled": true
+  },
+  {
+    "playerId": "jake_browning_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 3,
+    "enabled": true
+  },
+  {
+    "playerId": "will_grier_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 3,
+    "enabled": true
+  },
+  {
+    "playerId": "jordan_love_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 2,
+    "enabled": true
+  },
+  {
+    "playerId": "tyler_huntley_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 3,
+    "enabled": true
+  },
+  {
+    "playerId": "jalen_hurts_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 1,
+    "enabled": true
+  },
+  {
+    "playerId": "jake_fromm_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 3,
+    "enabled": true
+  },
+  {
+    "playerId": "ben_dinucci_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 3,
+    "enabled": true
+  },
+  {
+    "playerId": "justin_herbert_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 1,
+    "enabled": true
+  },
+  {
+    "playerId": "tua_tagovailoa_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 1,
+    "enabled": true
+  },
+  {
+    "playerId": "joe_burrow_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 1,
+    "enabled": true
+  },
+  {
+    "playerId": "trey_lance_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 2,
+    "enabled": true
+  },
+  {
+    "playerId": "trevor_lawrence_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 1,
+    "enabled": true
+  },
+  {
+    "playerId": "zach_wilson_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 1,
+    "enabled": true
+  },
+  {
+    "playerId": "justin_fields_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 1,
+    "enabled": true
+  },
+  {
+    "playerId": "davis_mills_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 2,
+    "enabled": true
+  },
+  {
+    "playerId": "sam_ehlinger_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 3,
+    "enabled": true
+  },
+  {
+    "playerId": "mac_jones_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 1,
+    "enabled": true
+  },
+  {
+    "playerId": "ian_book_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 3,
+    "enabled": true
+  },
+  {
+    "playerId": "kyle_trask_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 3,
+    "enabled": true
+  },
+  {
+    "playerId": "shane_buechele_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 3,
+    "enabled": true
+  },
+  {
+    "playerId": "sam_howell_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 2,
+    "enabled": true
+  },
+  {
+    "playerId": "brock_purdy_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 1,
+    "enabled": true
+  },
+  {
+    "playerId": "malik_willis_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 2,
+    "enabled": true
+  },
+  {
+    "playerId": "bailey_zappe_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 3,
+    "enabled": true
+  },
+  {
+    "playerId": "matt_corral_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 3,
+    "enabled": true
+  },
+  {
+    "playerId": "kenny_pickett_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 2,
+    "enabled": true
+  },
+  {
+    "playerId": "chris_oladokun_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 3,
+    "enabled": true
+  },
+  {
+    "playerId": "skylar_thompson_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 3,
+    "enabled": true
+  },
+  {
+    "playerId": "desmond_ridder_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 2,
+    "enabled": true
+  },
+  {
+    "playerId": "anthony_richardson_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 2,
+    "enabled": true
+  },
+  {
+    "playerId": "cj_stroud_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 1,
+    "enabled": true
+  },
+  {
+    "playerId": "bryce_young_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 1,
+    "enabled": true
+  },
+  {
+    "playerId": "tyson_bagent_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 2,
+    "enabled": true
+  },
+  {
+    "playerId": "tanner_mckee_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 2,
+    "enabled": true
+  },
+  {
+    "playerId": "dorian_thompsonrobinson_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 2,
+    "enabled": true
+  },
+  {
+    "playerId": "will_levis_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 2,
+    "enabled": true
+  },
+  {
+    "playerId": "clayton_tune_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 3,
+    "enabled": true
+  },
+  {
+    "playerId": "jake_haener_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 3,
+    "enabled": true
+  },
+  {
+    "playerId": "aidan_oconnell_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 2,
+    "enabled": true
+  },
+  {
+    "playerId": "tommy_devito_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 2,
+    "enabled": true
+  },
+  {
+    "playerId": "sean_clifford_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 3,
+    "enabled": true
+  },
+  {
+    "playerId": "jaren_hall_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 3,
+    "enabled": true
+  },
+  {
+    "playerId": "hendon_hooker_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 2,
+    "enabled": true
+  },
+  {
+    "playerId": "stetson_bennett_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 3,
+    "enabled": true
+  },
+  {
+    "playerId": "jj_mccarthy_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 1,
+    "enabled": true
+  },
+  {
+    "playerId": "drake_maye_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 1,
+    "enabled": true
+  },
+  {
+    "playerId": "caleb_williams_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 1,
+    "enabled": true
+  },
+  {
+    "playerId": "jayden_daniels_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 1,
+    "enabled": true
+  },
+  {
+    "playerId": "spencer_rattler_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 2,
+    "enabled": true
+  },
+  {
+    "playerId": "michael_penix_jr_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 1,
+    "enabled": true
+  },
+  {
+    "playerId": "joe_milton_iii_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 2,
+    "enabled": true
+  },
+  {
+    "playerId": "bo_nix_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 1,
+    "enabled": true
+  },
+  {
+    "playerId": "jack_plummer_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 3,
+    "enabled": true
+  },
+  {
+    "playerId": "sam_hartman_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 3,
+    "enabled": true
+  },
+  {
+    "playerId": "jaxson_dart_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 1,
+    "enabled": true
+  },
+  {
+    "playerId": "quinn_ewers_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 3,
+    "enabled": true
+  },
+  {
+    "playerId": "jalen_milroe_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 2,
+    "enabled": true
+  },
+  {
+    "playerId": "riley_leonard_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 2,
+    "enabled": true
+  },
+  {
+    "playerId": "cameron_ward_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 1,
+    "enabled": true
+  },
+  {
+    "playerId": "shedeur_sanders_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 1,
+    "enabled": true
+  },
+  {
+    "playerId": "will_howard_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 3,
+    "enabled": true
+  },
+  {
+    "playerId": "dillon_gabriel_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 2,
+    "enabled": true
+  },
+  {
+    "playerId": "tyler_shough_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 2,
+    "enabled": true
+  },
+  {
+    "playerId": "brian_westbrook_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 2,
+    "enabled": true
+  },
+  {
     "playerId": "adrian_peterson_nfl",
     "sport": "Football",
     "league": "NFL",
@@ -35,7 +1260,119 @@
     "enabled": true
   },
   {
+    "playerId": "willis_mcgahee_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 3,
+    "enabled": true
+  },
+  {
+    "playerId": "cecil_sapp_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 3,
+    "enabled": true
+  },
+  {
+    "playerId": "steven_jackson_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 2,
+    "enabled": true
+  },
+  {
+    "playerId": "derrick_ward_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 3,
+    "enabled": true
+  },
+  {
+    "playerId": "marion_barber_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 3,
+    "enabled": true
+  },
+  {
+    "playerId": "cadillac_williams_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 2,
+    "enabled": true
+  },
+  {
     "playerId": "maurice_jonesdrew_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 2,
+    "enabled": true
+  },
+  {
+    "playerId": "reggie_bush_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 1,
+    "enabled": true
+  },
+  {
+    "playerId": "joseph_addai_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 3,
+    "enabled": true
+  },
+  {
+    "playerId": "deangelo_williams_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 3,
+    "enabled": true
+  },
+  {
+    "playerId": "fred_jackson_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 3,
+    "enabled": true
+  },
+  {
+    "playerId": "marshawn_lynch_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 1,
+    "enabled": true
+  },
+  {
+    "playerId": "antonio_pittman_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 3,
+    "enabled": true
+  },
+  {
+    "playerId": "pierre_thomas_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 3,
+    "enabled": true
+  },
+  {
+    "playerId": "rashard_mendenhall_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 3,
+    "enabled": true
+  },
+  {
+    "playerId": "felix_jones_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 3,
+    "enabled": true
+  },
+  {
+    "playerId": "tim_hightower_nfl",
     "sport": "Football",
     "league": "NFL",
     "difficulty": 3,
@@ -45,7 +1382,945 @@
     "playerId": "steve_slaton_nfl",
     "sport": "Football",
     "league": "NFL",
-    "difficulty": 4,
+    "difficulty": 3,
+    "enabled": true
+  },
+  {
+    "playerId": "justin_forsett_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 3,
+    "enabled": true
+  },
+  {
+    "playerId": "benjarvus_greenellis_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 2,
+    "enabled": true
+  },
+  {
+    "playerId": "danny_woodhead_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 2,
+    "enabled": true
+  },
+  {
+    "playerId": "lesean_mccoy_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 1,
+    "enabled": true
+  },
+  {
+    "playerId": "rashad_jennings_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 3,
+    "enabled": true
+  },
+  {
+    "playerId": "bernard_scott_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 3,
+    "enabled": true
+  },
+  {
+    "playerId": "jahvid_best_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 3,
+    "enabled": true
+  },
+  {
+    "playerId": "chris_ivory_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 3,
+    "enabled": true
+  },
+  {
+    "playerId": "cj_spiller_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 2,
+    "enabled": true
+  },
+  {
+    "playerId": "legarrette_blount_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 2,
+    "enabled": true
+  },
+  {
+    "playerId": "dion_lewis_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 2,
+    "enabled": true
+  },
+  {
+    "playerId": "jacquizz_rodgers_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 3,
+    "enabled": true
+  },
+  {
+    "playerId": "roy_helu_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 3,
+    "enabled": true
+  },
+  {
+    "playerId": "demarco_murray_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 1,
+    "enabled": true
+  },
+  {
+    "playerId": "trent_richardson_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 1,
+    "enabled": true
+  },
+  {
+    "playerId": "alfred_morris_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 2,
+    "enabled": true
+  },
+  {
+    "playerId": "theo_riddick_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 3,
+    "enabled": true
+  },
+  {
+    "playerId": "rex_burkhead_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 2,
+    "enabled": true
+  },
+  {
+    "playerId": "eddie_lacy_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 1,
+    "enabled": true
+  },
+  {
+    "playerId": "latavius_murray_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 1,
+    "enabled": true
+  },
+  {
+    "playerId": "andre_ellington_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 3,
+    "enabled": true
+  },
+  {
+    "playerId": "devonta_freeman_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 2,
+    "enabled": true
+  },
+  {
+    "playerId": "charcandrick_west_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 3,
+    "enabled": true
+  },
+  {
+    "playerId": "todd_gurley_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 1,
+    "enabled": true
+  },
+  {
+    "playerId": "tj_yeldon_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 2,
+    "enabled": true
+  },
+  {
+    "playerId": "ameer_abdullah_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 3,
+    "enabled": true
+  },
+  {
+    "playerId": "raheem_mostert_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 2,
+    "enabled": true
+  },
+  {
+    "playerId": "peyton_barber_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 2,
+    "enabled": true
+  },
+  {
+    "playerId": "derrick_henry_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 1,
+    "enabled": true
+  },
+  {
+    "playerId": "devontae_booker_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 3,
+    "enabled": true
+  },
+  {
+    "playerId": "joe_mixon_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 1,
+    "enabled": true
+  },
+  {
+    "playerId": "christian_mccaffrey_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 1,
+    "enabled": true
+  },
+  {
+    "playerId": "donta_foreman_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 2,
+    "enabled": true
+  },
+  {
+    "playerId": "jeremy_mcnichols_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 3,
+    "enabled": true
+  },
+  {
+    "playerId": "samaje_perine_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 2,
+    "enabled": true
+  },
+  {
+    "playerId": "kareem_hunt_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 1,
+    "enabled": true
+  },
+  {
+    "playerId": "alvin_kamara_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 1,
+    "enabled": true
+  },
+  {
+    "playerId": "austin_ekeler_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 1,
+    "enabled": true
+  },
+  {
+    "playerId": "james_conner_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 1,
+    "enabled": true
+  },
+  {
+    "playerId": "jamaal_williams_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 2,
+    "enabled": true
+  },
+  {
+    "playerId": "matt_breida_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 3,
+    "enabled": true
+  },
+  {
+    "playerId": "aaron_jones_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 1,
+    "enabled": true
+  },
+  {
+    "playerId": "nick_chubb_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 1,
+    "enabled": true
+  },
+  {
+    "playerId": "saquon_barkley_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 1,
+    "enabled": true
+  },
+  {
+    "playerId": "rashaad_penny_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 2,
+    "enabled": true
+  },
+  {
+    "playerId": "kalen_ballage_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 3,
+    "enabled": true
+  },
+  {
+    "playerId": "gus_edwards_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 2,
+    "enabled": true
+  },
+  {
+    "playerId": "travis_homer_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 3,
+    "enabled": true
+  },
+  {
+    "playerId": "alexander_mattison_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 3,
+    "enabled": true
+  },
+  {
+    "playerId": "josh_jacobs_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 1,
+    "enabled": true
+  },
+  {
+    "playerId": "justice_hill_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 3,
+    "enabled": true
+  },
+  {
+    "playerId": "ty_johnson_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 3,
+    "enabled": true
+  },
+  {
+    "playerId": "devin_singletary_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 3,
+    "enabled": true
+  },
+  {
+    "playerId": "david_montgomery_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 1,
+    "enabled": true
+  },
+  {
+    "playerId": "miles_sanders_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 2,
+    "enabled": true
+  },
+  {
+    "playerId": "tony_pollard_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 1,
+    "enabled": true
+  },
+  {
+    "playerId": "craig_reynolds_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 3,
+    "enabled": true
+  },
+  {
+    "playerId": "dernest_johnson_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 3,
+    "enabled": true
+  },
+  {
+    "playerId": "clyde_edwardshelaire_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 2,
+    "enabled": true
+  },
+  {
+    "playerId": "jonathan_taylor_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 1,
+    "enabled": true
+  },
+  {
+    "playerId": "dandre_swift_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 1,
+    "enabled": true
+  },
+  {
+    "playerId": "salvon_ahmed_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 3,
+    "enabled": true
+  },
+  {
+    "playerId": "cam_akers_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 2,
+    "enabled": true
+  },
+  {
+    "playerId": "jk_dobbins_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 1,
+    "enabled": true
+  },
+  {
+    "playerId": "deejay_dallas_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 3,
+    "enabled": true
+  },
+  {
+    "playerId": "darrynton_evans_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 3,
+    "enabled": true
+  },
+  {
+    "playerId": "antonio_gibson_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 2,
+    "enabled": true
+  },
+  {
+    "playerId": "rico_dowdle_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 2,
+    "enabled": true
+  },
+  {
+    "playerId": "aj_dillon_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 2,
+    "enabled": true
+  },
+  {
+    "playerId": "zack_moss_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 3,
+    "enabled": true
+  },
+  {
+    "playerId": "joshua_kelley_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 3,
+    "enabled": true
+  },
+  {
+    "playerId": "jamycal_hasty_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 3,
+    "enabled": true
+  },
+  {
+    "playerId": "javonte_williams_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 2,
+    "enabled": true
+  },
+  {
+    "playerId": "jaret_patterson_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 3,
+    "enabled": true
+  },
+  {
+    "playerId": "chuba_hubbard_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 2,
+    "enabled": true
+  },
+  {
+    "playerId": "michael_carter_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 3,
+    "enabled": true
+  },
+  {
+    "playerId": "kenneth_gainwell_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 2,
+    "enabled": true
+  },
+  {
+    "playerId": "elijah_mitchell_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 2,
+    "enabled": true
+  },
+  {
+    "playerId": "khalil_herbert_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 2,
+    "enabled": true
+  },
+  {
+    "playerId": "najee_harris_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 1,
+    "enabled": true
+  },
+  {
+    "playerId": "rhamondre_stevenson_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 1,
+    "enabled": true
+  },
+  {
+    "playerId": "breece_hall_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 1,
+    "enabled": true
+  },
+  {
+    "playerId": "bam_knight_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 3,
+    "enabled": true
+  },
+  {
+    "playerId": "kenneth_walker_iii_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 1,
+    "enabled": true
+  },
+  {
+    "playerId": "sincere_mccormick_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 3,
+    "enabled": true
+  },
+  {
+    "playerId": "kyren_williams_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 1,
+    "enabled": true
+  },
+  {
+    "playerId": "tyler_allgeier_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 2,
+    "enabled": true
+  },
+  {
+    "playerId": "dameon_pierce_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 2,
+    "enabled": true
+  },
+  {
+    "playerId": "hassan_haskins_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 3,
+    "enabled": true
+  },
+  {
+    "playerId": "james_cook_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 1,
+    "enabled": true
+  },
+  {
+    "playerId": "zamir_white_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 3,
+    "enabled": true
+  },
+  {
+    "playerId": "jerome_ford_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 3,
+    "enabled": true
+  },
+  {
+    "playerId": "jordan_mason_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 2,
+    "enabled": true
+  },
+  {
+    "playerId": "brian_robinson_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 2,
+    "enabled": true
+  },
+  {
+    "playerId": "isiah_pacheco_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 2,
+    "enabled": true
+  },
+  {
+    "playerId": "rachaad_white_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 2,
+    "enabled": true
+  },
+  {
+    "playerId": "jaylen_warren_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 2,
+    "enabled": true
+  },
+  {
+    "playerId": "tank_bigsby_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 3,
+    "enabled": true
+  },
+  {
+    "playerId": "kendre_miller_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 3,
+    "enabled": true
+  },
+  {
+    "playerId": "jahmyr_gibbs_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 1,
+    "enabled": true
+  },
+  {
+    "playerId": "bijan_robinson_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 1,
+    "enabled": true
+  },
+  {
+    "playerId": "keaton_mitchell_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 3,
+    "enabled": true
+  },
+  {
+    "playerId": "deuce_vaughn_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 3,
+    "enabled": true
+  },
+  {
+    "playerId": "sean_tucker_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 2,
+    "enabled": true
+  },
+  {
+    "playerId": "devon_achane_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 1,
+    "enabled": true
+  },
+  {
+    "playerId": "tyjae_spears_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 2,
+    "enabled": true
+  },
+  {
+    "playerId": "roschon_johnson_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 2,
+    "enabled": true
+  },
+  {
+    "playerId": "zach_charbonnet_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 2,
+    "enabled": true
+  },
+  {
+    "playerId": "jaleel_mclaughlin_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 2,
+    "enabled": true
+  },
+  {
+    "playerId": "chase_brown_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 1,
+    "enabled": true
+  },
+  {
+    "playerId": "braelon_allen_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 3,
+    "enabled": true
+  },
+  {
+    "playerId": "jonathon_brooks_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 3,
+    "enabled": true
+  },
+  {
+    "playerId": "will_shipley_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 2,
+    "enabled": true
+  },
+  {
+    "playerId": "bucky_irving_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 1,
+    "enabled": true
+  },
+  {
+    "playerId": "trey_benson_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 2,
+    "enabled": true
+  },
+  {
+    "playerId": "marshawn_lloyd_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 3,
+    "enabled": true
+  },
+  {
+    "playerId": "blake_corum_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 2,
+    "enabled": true
+  },
+  {
+    "playerId": "tyrone_tracy_jr_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 2,
+    "enabled": true
+  },
+  {
+    "playerId": "dylan_sampson_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 2,
+    "enabled": true
+  },
+  {
+    "playerId": "lequint_allen_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 3,
+    "enabled": true
+  },
+  {
+    "playerId": "travis_etienne_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 1,
+    "enabled": true
+  },
+  {
+    "playerId": "ollie_gordon_ii_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 2,
+    "enabled": true
+  },
+  {
+    "playerId": "jaydon_blue_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 3,
+    "enabled": true
+  },
+  {
+    "playerId": "ashton_jeanty_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 1,
+    "enabled": true
+  },
+  {
+    "playerId": "kaleb_johnson_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 3,
+    "enabled": true
+  },
+  {
+    "playerId": "omarion_hampton_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 1,
+    "enabled": true
+  },
+  {
+    "playerId": "treveyon_henderson_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 1,
+    "enabled": true
+  },
+  {
+    "playerId": "kyle_monangai_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 1,
+    "enabled": true
+  },
+  {
+    "playerId": "bhayshul_tuten_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 2,
+    "enabled": true
+  },
+  {
+    "playerId": "jacory_croskeymerritt_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 2,
+    "enabled": true
+  },
+  {
+    "playerId": "woody_marks_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 2,
+    "enabled": true
+  },
+  {
+    "playerId": "quinshon_judkins_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 1,
+    "enabled": true
+  },
+  {
+    "playerId": "cam_skattebo_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 1,
+    "enabled": true
+  },
+  {
+    "playerId": "rj_harvey_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 2,
     "enabled": true
   },
   {
@@ -63,6 +2338,27 @@
     "enabled": true
   },
   {
+    "playerId": "nate_burleson_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 3,
+    "enabled": true
+  },
+  {
+    "playerId": "brandon_lloyd_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 3,
+    "enabled": true
+  },
+  {
+    "playerId": "anquan_boldin_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 3,
+    "enabled": true
+  },
+  {
     "playerId": "larry_fitzgerald_nfl",
     "sport": "Football",
     "league": "NFL",
@@ -70,7 +2366,70 @@
     "enabled": true
   },
   {
+    "playerId": "michael_jenkins_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 3,
+    "enabled": true
+  },
+  {
+    "playerId": "jerricho_cotchery_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 2,
+    "enabled": true
+  },
+  {
+    "playerId": "devery_henderson_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 3,
+    "enabled": true
+  },
+  {
+    "playerId": "malcom_floyd_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 3,
+    "enabled": true
+  },
+  {
     "playerId": "wes_welker_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 1,
+    "enabled": true
+  },
+  {
+    "playerId": "nate_washington_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 3,
+    "enabled": true
+  },
+  {
+    "playerId": "josh_cribbs_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 3,
+    "enabled": true
+  },
+  {
+    "playerId": "roddy_white_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 3,
+    "enabled": true
+  },
+  {
+    "playerId": "greg_jennings_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 2,
+    "enabled": true
+  },
+  {
+    "playerId": "marques_colston_nfl",
     "sport": "Football",
     "league": "NFL",
     "difficulty": 2,
@@ -80,14 +2439,14 @@
     "playerId": "jason_avant_nfl",
     "sport": "Football",
     "league": "NFL",
-    "difficulty": 4,
+    "difficulty": 3,
     "enabled": true
   },
   {
     "playerId": "devin_hester_nfl",
     "sport": "Football",
     "league": "NFL",
-    "difficulty": 3,
+    "difficulty": 1,
     "enabled": true
   },
   {
@@ -98,24 +2457,500 @@
     "enabled": true
   },
   {
-    "playerId": "jordy_nelson_nfl",
+    "playerId": "dwayne_bowe_nfl",
     "sport": "Football",
     "league": "NFL",
     "difficulty": 2,
     "enabled": true
   },
   {
-    "playerId": "darrius_heywardbey_nfl",
+    "playerId": "james_jones_nfl",
     "sport": "Football",
     "league": "NFL",
     "difficulty": 3,
     "enabled": true
   },
   {
-    "playerId": "dez_bryant_nfl",
+    "playerId": "danny_amendola_nfl",
     "sport": "Football",
     "league": "NFL",
     "difficulty": 2,
+    "enabled": true
+  },
+  {
+    "playerId": "jordy_nelson_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 1,
+    "enabled": true
+  },
+  {
+    "playerId": "harry_douglas_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 3,
+    "enabled": true
+  },
+  {
+    "playerId": "kenny_britt_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 3,
+    "enabled": true
+  },
+  {
+    "playerId": "jeremy_maclin_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 3,
+    "enabled": true
+  },
+  {
+    "playerId": "darrius_heywardbey_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 2,
+    "enabled": true
+  },
+  {
+    "playerId": "mike_wallace_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 2,
+    "enabled": true
+  },
+  {
+    "playerId": "dez_bryant_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 1,
+    "enabled": true
+  },
+  {
+    "playerId": "demaryius_thomas_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 1,
+    "enabled": true
+  },
+  {
+    "playerId": "emmanuel_sanders_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 2,
+    "enabled": true
+  },
+  {
+    "playerId": "randall_cobb_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 1,
+    "enabled": true
+  },
+  {
+    "playerId": "julio_jones_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 1,
+    "enabled": true
+  },
+  {
+    "playerId": "aj_green_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 1,
+    "enabled": true
+  },
+  {
+    "playerId": "alshon_jeffery_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 2,
+    "enabled": true
+  },
+  {
+    "playerId": "ty_hilton_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 2,
+    "enabled": true
+  },
+  {
+    "playerId": "mohamed_sanu_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 2,
+    "enabled": true
+  },
+  {
+    "playerId": "deandre_hopkins_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 1,
+    "enabled": true
+  },
+  {
+    "playerId": "keenan_allen_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 1,
+    "enabled": true
+  },
+  {
+    "playerId": "kenny_stills_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 2,
+    "enabled": true
+  },
+  {
+    "playerId": "robert_woods_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 2,
+    "enabled": true
+  },
+  {
+    "playerId": "marquise_goodwin_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 3,
+    "enabled": true
+  },
+  {
+    "playerId": "adam_thielen_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 1,
+    "enabled": true
+  },
+  {
+    "playerId": "brandin_cooks_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 2,
+    "enabled": true
+  },
+  {
+    "playerId": "allen_robinson_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 2,
+    "enabled": true
+  },
+  {
+    "playerId": "mike_evans_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 1,
+    "enabled": true
+  },
+  {
+    "playerId": "sammy_watkins_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 2,
+    "enabled": true
+  },
+  {
+    "playerId": "davante_adams_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 1,
+    "enabled": true
+  },
+  {
+    "playerId": "amari_cooper_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 1,
+    "enabled": true
+  },
+  {
+    "playerId": "stefon_diggs_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 1,
+    "enabled": true
+  },
+  {
+    "playerId": "jamison_crowder_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 3,
+    "enabled": true
+  },
+  {
+    "playerId": "nelson_agholor_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 2,
+    "enabled": true
+  },
+  {
+    "playerId": "devante_parker_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 2,
+    "enabled": true
+  },
+  {
+    "playerId": "chris_conley_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 3,
+    "enabled": true
+  },
+  {
+    "playerId": "tyler_lockett_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 2,
+    "enabled": true
+  },
+  {
+    "playerId": "laquon_treadwell_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 3,
+    "enabled": true
+  },
+  {
+    "playerId": "tyler_boyd_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 3,
+    "enabled": true
+  },
+  {
+    "playerId": "demarcus_robinson_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 2,
+    "enabled": true
+  },
+  {
+    "playerId": "kalif_raymond_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 3,
+    "enabled": true
+  },
+  {
+    "playerId": "tyreek_hill_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 1,
+    "enabled": true
+  },
+  {
+    "playerId": "sterling_shepard_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 2,
+    "enabled": true
+  },
+  {
+    "playerId": "juju_smithschuster_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 1,
+    "enabled": true
+  },
+  {
+    "playerId": "curtis_samuel_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 2,
+    "enabled": true
+  },
+  {
+    "playerId": "chris_godwin_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 1,
+    "enabled": true
+  },
+  {
+    "playerId": "noah_brown_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 2,
+    "enabled": true
+  },
+  {
+    "playerId": "kendrick_bourne_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 2,
+    "enabled": true
+  },
+  {
+    "playerId": "jamal_agnew_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 3,
+    "enabled": true
+  },
+  {
+    "playerId": "zay_jones_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 3,
+    "enabled": true
+  },
+  {
+    "playerId": "josh_reynolds_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 3,
+    "enabled": true
+  },
+  {
+    "playerId": "mike_williams_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 2,
+    "enabled": true
+  },
+  {
+    "playerId": "mack_hollins_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 2,
+    "enabled": true
+  },
+  {
+    "playerId": "cooper_kupp_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 1,
+    "enabled": true
+  },
+  {
+    "playerId": "cornelius_johnson_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 3,
+    "enabled": true
+  },
+  {
+    "playerId": "matthew_golden_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 1,
+    "enabled": true
+  },
+  {
+    "playerId": "elic_ayomanor_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 2,
+    "enabled": true
+  },
+  {
+    "playerId": "tetairoa_mcmillan_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 1,
+    "enabled": true
+  },
+  {
+    "playerId": "tai_felton_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 3,
+    "enabled": true
+  },
+  {
+    "playerId": "jayden_higgins_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 2,
+    "enabled": true
+  },
+  {
+    "playerId": "pat_bryant_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 3,
+    "enabled": true
+  },
+  {
+    "playerId": "tory_horton_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 3,
+    "enabled": true
+  },
+  {
+    "playerId": "kyle_williams_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 2,
+    "enabled": true
+  },
+  {
+    "playerId": "emeka_egbuka_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 1,
+    "enabled": true
+  },
+  {
+    "playerId": "jimmy_horn_jr_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 3,
+    "enabled": true
+  },
+  {
+    "playerId": "jaylin_noel_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 2,
+    "enabled": true
+  },
+  {
+    "playerId": "keandre_lambertsmith_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 3,
+    "enabled": true
+  },
+  {
+    "playerId": "tez_johnson_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 2,
+    "enabled": true
+  },
+  {
+    "playerId": "jaylin_lane_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 2,
+    "enabled": true
+  },
+  {
+    "playerId": "isaac_teslaa_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 2,
+    "enabled": true
+  },
+  {
+    "playerId": "chimere_dike_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 2,
+    "enabled": true
+  },
+  {
+    "playerId": "savion_williams_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 3,
     "enabled": true
   },
   {
@@ -129,7 +2964,7 @@
     "playerId": "antonio_gates_nfl",
     "sport": "Football",
     "league": "NFL",
-    "difficulty": 1,
+    "difficulty": 2,
     "enabled": true
   },
   {
@@ -157,7 +2992,245 @@
     "playerId": "vernon_davis_nfl",
     "sport": "Football",
     "league": "NFL",
+    "difficulty": 2,
+    "enabled": true
+  },
+  {
+    "playerId": "greg_olsen_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 2,
+    "enabled": true
+  },
+  {
+    "playerId": "jared_cook_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 2,
+    "enabled": true
+  },
+  {
+    "playerId": "jimmy_graham_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 1,
+    "enabled": true
+  },
+  {
+    "playerId": "kyle_rudolph_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 1,
+    "enabled": true
+  },
+  {
+    "playerId": "zach_ertz_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 1,
+    "enabled": true
+  },
+  {
+    "playerId": "travis_kelce_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 1,
+    "enabled": true
+  },
+  {
+    "playerId": "oj_howard_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 2,
+    "enabled": true
+  },
+  {
+    "playerId": "gerald_everett_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 2,
+    "enabled": true
+  },
+  {
+    "playerId": "robert_tonyan_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 2,
+    "enabled": true
+  },
+  {
+    "playerId": "mo_aliecox_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 2,
+    "enabled": true
+  },
+  {
+    "playerId": "dalton_schultz_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 1,
+    "enabled": true
+  },
+  {
+    "playerId": "will_dissly_nfl",
+    "sport": "Football",
+    "league": "NFL",
     "difficulty": 3,
+    "enabled": true
+  },
+  {
+    "playerId": "mike_gesicki_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 2,
+    "enabled": true
+  },
+  {
+    "playerId": "mark_andrews_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 1,
+    "enabled": true
+  },
+  {
+    "playerId": "durham_smythe_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 3,
+    "enabled": true
+  },
+  {
+    "playerId": "tyler_conklin_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 2,
+    "enabled": true
+  },
+  {
+    "playerId": "dallas_goedert_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 1,
+    "enabled": true
+  },
+  {
+    "playerId": "hayden_hurst_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 3,
+    "enabled": true
+  },
+  {
+    "playerId": "jordan_akins_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 3,
+    "enabled": true
+  },
+  {
+    "playerId": "irv_smith_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 3,
+    "enabled": true
+  },
+  {
+    "playerId": "noah_fant_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 1,
+    "enabled": true
+  },
+  {
+    "playerId": "tj_hockenson_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 1,
+    "enabled": true
+  },
+  {
+    "playerId": "dawson_knox_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 1,
+    "enabled": true
+  },
+  {
+    "playerId": "cole_kmet_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 1,
+    "enabled": true
+  },
+  {
+    "playerId": "colby_parkinson_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 2,
+    "enabled": true
+  },
+  {
+    "playerId": "juwan_johnson_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 2,
+    "enabled": true
+  },
+  {
+    "playerId": "kyle_pitts_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 1,
+    "enabled": true
+  },
+  {
+    "playerId": "tommy_tremble_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 3,
+    "enabled": true
+  },
+  {
+    "playerId": "greg_dulcich_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 2,
+    "enabled": true
+  },
+  {
+    "playerId": "jake_tonges_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 2,
+    "enabled": true
+  },
+  {
+    "playerId": "harold_fannin_jr_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 1,
+    "enabled": true
+  },
+  {
+    "playerId": "colston_loveland_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 1,
+    "enabled": true
+  },
+  {
+    "playerId": "oronde_gadsden_ii_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 2,
+    "enabled": true
+  },
+  {
+    "playerId": "tyler_warren_nfl",
+    "sport": "Football",
+    "league": "NFL",
+    "difficulty": 1,
     "enabled": true
   }
 ]

@@ -7,36 +7,38 @@ export type Player = {
   sport: Sport
   league?: string
 
+  // Player Attributes (CATEGORIES FOR ALL SPORTS - Position just has unique values for each sport)
   team: string
   teamsPlayedFor: number
-
   position: string[]
-
   age: number
-
-  // NEW FIELDS ✅
   college?: string
   draftRound?: number
   draftPick?: number
+  gamesPlayed: number
 
-  // Scoring
+  // PLAYER STATISTICS:
+
+  //FOOTBALL STATISTICS
+
+  //Passing (Career Totals)
   totalTDs: number
   passingTDs: number
+
+  //TD's General (Career Totals)
   totalTDsResponsible: number
 
-  // Yardage
+  // Yardage (Career Totals)
   passingYards: number
   rushingYards: number
+  receivingYards: number
+  allPurposeYards: number
 
   // Honors
   proBowls: number
-  allProSeasons: number
   superBowlsWon: number
 
-  // Career
-  gamesPlayed: number
-
-  // Defense
+  // Defense (Career Totals)
   tackles: number
   sacks: number
   interceptions: number
