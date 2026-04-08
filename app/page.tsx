@@ -383,12 +383,12 @@ export default function Home() {
             {values.map((val, idx) => {
               const key = [
                 "name",
-                "position",
                 "team",
+                "position",
                 "age",
                 "college",
-                "draftPick",
                 "draftYear",
+                "draftPick",
                 "jersey_number"
               ][idx]
 
@@ -463,28 +463,72 @@ export default function Home() {
   </table>
 </div>
 
-        {/* MODAL */}
-        {showModal && target && (
-          <div style={{
-            position:"fixed",
-            top:0,left:0,width:"100%",height:"100%",
-            background:"rgba(0,0,0,0.8)",
-            display:"flex",justifyContent:"center",alignItems:"center"
-          }}>
-            <div style={{
-              background:"#111",
-              padding:20,
-              borderRadius:12,
-              border:"1px solid #14b8a6"
-            }}>
-              <h2 style={{ color:"#14b8a6" }}>
-                {won ? "You got it!" : "Player Revealed"}
-              </h2>
-              <p><strong>{target.name}</strong></p>
-              <button onClick={()=>setShowModal(false)}>Close</button>
-            </div>
-          </div>
-        )}
+{/* MODAL */}
+{showModal && target && (
+  <div
+    style={{
+      position: "fixed",
+      top: 0,
+      left: 0,
+      width: "100%",
+      height: "100%",
+      background: "rgba(0,0,0,0.8)",
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+      zIndex: 1000
+    }}
+  >
+    <div
+      style={{
+        background: "#111",
+        padding: 20,
+        borderRadius: 12,
+        border: "1px solid #14b8a6",
+        minWidth: 280
+      }}
+    >
+      <h2 style={{ color: "#14b8a6", marginBottom: 12 }}>
+        {won ? "You got it!" : "Player Revealed"}
+      </h2>
+
+      {/* PLAYER NAME */}
+      <p style={{ fontWeight: 700, fontSize: 18, marginBottom: 12 }}>
+        {target.name}
+      </p>
+
+      {/* ATTRIBUTES */}
+      <div style={{ fontSize: 13, lineHeight: 1.6 }}>
+        <div><strong>Team:</strong> {target.team}</div>
+        <div><strong>Position:</strong> {target.position?.[0]}</div>
+        <div><strong>Age:</strong> {target.age}</div>
+        <div>
+          <strong>College:</strong>{" "}
+          {target.college
+            ? target.college.split(";").pop().trim()
+            : ""}
+        </div>
+        <div><strong>Draft Year:</strong> {target.draftYear}</div>
+        <div><strong>Draft Pick:</strong> {target.draftPick}</div>
+        <div><strong>Jersey #:</strong> {target.jersey_number}</div>
+      </div>
+
+      <button
+        onClick={() => setShowModal(false)}
+        style={{
+          marginTop: 16,
+          padding: "8px 12px",
+          borderRadius: 8,
+          border: "1px solid #14b8a6",
+          background: "transparent",
+          color: "#14b8a6"
+        }}
+      >
+        Close
+      </button>
+    </div>
+  </div>
+)}
 
       </div>
     </div>
