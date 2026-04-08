@@ -23,26 +23,21 @@ export default function Home() {
 
   // 🎯 TARGET LOGIC
   useEffect(() => {
-    const poolFiltered = pool.filter(
+    const filteredPool = pool.filter(
       (p) =>
         p.league === selectedLeague &&
         p.difficulty === selectedDifficulty
     )
 
-    const poolIds = new Set(poolFiltered.map((p) => p.playerId))
+    const ids = new Set(filteredPool.map((p) => p.playerId))
+    const eligible = allPlayers.filter((p) => ids.has(p.id))
 
-    const eligiblePlayers = allPlayers.filter((p) =>
-      poolIds.has(p.id)
-    )
+    if (!eligible.length) return
 
-    if (!eligiblePlayers.length) return
+    const random =
+      eligible[Math.floor(Math.random() * eligible.length)]
 
-    const randomPlayer =
-      eligiblePlayers[Math.floor(Math.random() * eligiblePlayers.length)]
-
-    setTarget(randomPlayer)
-
-    // reset game
+    setTarget(random)
     setGuesses([])
     setGameOver(false)
     setWon(false)
@@ -51,7 +46,6 @@ export default function Home() {
   // 🔍 SEARCH
   const filteredPlayers = useMemo(() => {
     if (!query) return []
-
     return allPlayers
       .filter((p) =>
         p.name.toLowerCase().includes(query.toLowerCase())
@@ -85,12 +79,23 @@ export default function Home() {
     setQuery("")
   }
 
-  // 🎨 CELL COLORS
+  // 🎨 CELL COLOR LOGIC + ARROWS
   function getCellStyle(key: string, guessVal: any, targetVal: any) {
-    if (!targetVal) return { background: "#111", color: "#fff" }
+    let background = "#111"
+    let color = "#fff"
+    let arrow = ""
+
+    if (guessVal == null || targetVal == null) {
+      return { background, color, arrow }
+    }
+
+    if (Array.isArray(guessVal) && Array.isArray(targetVal)) {
+      const match = guessVal.some((g) => targetVal.includes(g))
+      if (match) return { background: "#16a34a", color: "#fff", arrow: "" }
+    }
 
     if (guessVal === targetVal) {
-      return { background: "#16a34a", color: "#fff" }
+      return { background: "#16a34a", color: "#fff", arrow: "" }
     }
 
     if (["age", "draftPick", "draftYear", "jersey_number"].includes(key)) {
@@ -99,12 +104,22 @@ export default function Home() {
 
       if (!isNaN(g) && !isNaN(t)) {
         if (Math.abs(g - t) <= 2) {
-          return { background: "#eab308", color: "#000" }
+          return {
+            background: "#eab308",
+            color: "#000",
+            arrow: g < t ? "↑" : "↓"
+          }
+        }
+
+        return {
+          background: "#1f2937",
+          color: "#9ca3af",
+          arrow: g < t ? "↑" : "↓"
         }
       }
     }
 
-    return { background: "#1f2937", color: "#9ca3af" }
+    return { background: "#1f2937", color: "#9ca3af", arrow: "" }
   }
 
   return (
@@ -128,26 +143,48 @@ export default function Home() {
       <div style={{ maxWidth: 1100, margin: "0 auto", padding: 16 }}>
 
         {/* LOGO */}
-        <div style={{ textAlign: "center" }}>
-          <img src="/main_logo.png" style={{ width: 180 }} />
+        <div style={{ display: "flex", justifyContent: "center", marginBottom: 10 }}>
+          <img src="/main_logo.png" style={{ width: 200 }} />
         </div>
 
         {/* SUBTITLE */}
         <p style={{ textAlign: "center", color: "#aaa", marginBottom: 16 }}>
-          Guess the player in 8 tries
+          Guess the player in 8 tries or less
         </p>
 
-        {/* CONTROLS */}
+        {/* LEGEND */}
         <div style={{
           display: "flex",
-          flexDirection: "column",
+          justifyContent: "center",
           gap: 10,
-          alignItems: "center",
-          marginBottom: 16
+          marginBottom: 20,
+          flexWrap: "wrap"
         }}>
-          
-          {/* LEAGUE */}
-          <div style={{ display: "flex", gap: 8 }}>
+          {[
+            { color: "#16a34a", text: "Correct" },
+            { color: "#eab308", text: "Close" },
+            { color: "#6b7280", text: "Incorrect" }
+          ].map((item) => (
+            <div key={item.text} style={{
+              border: `2px solid ${item.color}`,
+              padding: "6px 12px",
+              borderRadius: 6,
+              fontSize: 12,
+              color: item.color
+            }}>
+              {item.text}
+            </div>
+          ))}
+        </div>
+
+        {/* CONTROLS */}
+        <div style={{ marginBottom: 16 }}>
+
+          <div style={{ textAlign: "center", fontSize: 12, color: "#888", marginBottom: 6 }}>
+            League
+          </div>
+
+          <div style={{ display: "flex", justifyContent: "center", gap: 8, flexWrap: "wrap" }}>
             {["NFL"].map((league) => (
               <button
                 key={league}
@@ -156,10 +193,8 @@ export default function Home() {
                   padding: "8px 14px",
                   borderRadius: 8,
                   border: "1px solid #14b8a6",
-                  background:
-                    selectedLeague === league ? "#14b8a6" : "transparent",
-                  color:
-                    selectedLeague === league ? "#000" : "#14b8a6",
+                  background: selectedLeague === league ? "#14b8a6" : "transparent",
+                  color: selectedLeague === league ? "#000" : "#14b8a6",
                   fontWeight: 600
                 }}
               >
@@ -168,28 +203,25 @@ export default function Home() {
             ))}
           </div>
 
-          {/* DIFFICULTY */}
-          <div style={{ display: "flex", gap: 8 }}>
-            {[
-              { label: "Easy", value: 1 },
-              { label: "Medium", value: 2 },
-              { label: "Hard", value: 3 }
-            ].map((d) => (
+          <div style={{ textAlign: "center", fontSize: 12, color: "#888", margin: "10px 0 6px" }}>
+            Difficulty
+          </div>
+
+          <div style={{ display: "flex", justifyContent: "center", gap: 8, flexWrap: "wrap" }}>
+            {[1,2,3].map((d) => (
               <button
-                key={d.value}
-                onClick={() => setSelectedDifficulty(d.value)}
+                key={d}
+                onClick={() => setSelectedDifficulty(d)}
                 style={{
                   padding: "8px 14px",
                   borderRadius: 8,
                   border: "1px solid #14b8a6",
-                  background:
-                    selectedDifficulty === d.value ? "#14b8a6" : "transparent",
-                  color:
-                    selectedDifficulty === d.value ? "#000" : "#14b8a6",
+                  background: selectedDifficulty === d ? "#14b8a6" : "transparent",
+                  color: selectedDifficulty === d ? "#000" : "#14b8a6",
                   fontWeight: 600
                 }}
               >
-                {d.label}
+                {d === 1 ? "Easy" : d === 2 ? "Medium" : "Hard"}
               </button>
             ))}
           </div>
@@ -221,11 +253,7 @@ export default function Home() {
               marginTop: 6
             }}>
               {filteredPlayers.map((p) => (
-                <div
-                  key={p.id}
-                  onClick={() => handleSelectPlayer(p)}
-                  style={{ padding: 12, cursor: "pointer" }}
-                >
+                <div key={p.id} onClick={() => handleSelectPlayer(p)} style={{ padding: 12 }}>
                   {p.name}
                 </div>
               ))}
@@ -234,7 +262,7 @@ export default function Home() {
         </div>
 
         {/* GIVE UP */}
-        <div style={{ textAlign: "center", margin: "16px 0" }}>
+        <div style={{ display: "flex", justifyContent: "center", margin: "16px 0" }}>
           <button
             onClick={() => {
               setGameOver(true)
@@ -252,18 +280,21 @@ export default function Home() {
         </div>
 
         {/* TABLE */}
-        <div style={{
-          overflowX: "auto",
-          WebkitOverflowScrolling: "touch"
-        }}>
+        <div style={{ width: "100%", overflowX: "hidden" }}>
           <table style={{
             width: "100%",
-            minWidth: 900
+            tableLayout: "fixed",
+            borderCollapse: "separate",
+            borderSpacing: "0 8px"
           }}>
             <thead>
               <tr>
-                {["Player","Pos","Team","Age","College","Pick","Year","#","Draft"].map(h => (
-                  <th key={h} style={{ color:"#14b8a6", padding:8 }}>{h}</th>
+                {["Player","Position","Team","Age","College","Draft Pick","Draft Year","Jersey #","Drafted Team"].map((h,i)=>(
+                  <th key={h} style={{
+                    fontSize:11,
+                    padding:"4px",
+                    color:"#14b8a6"
+                  }}>{h}</th>
                 ))}
               </tr>
             </thead>
@@ -288,20 +319,25 @@ export default function Home() {
                   <tr key={i}>
                     {values.map((val, idx) => {
                       const key = ["name","position","team","age","college","draftPick","draftYear","jersey_number","draftTeam"][idx]
-
                       const style =
                         player && target
                           ? getCellStyle(key, player[key], target[key])
-                          : { background:"#111", color:"#fff" }
+                          : { background:"#111", color:"#fff", arrow:"" }
 
                       return (
                         <td key={idx} style={{
-                          padding:12,
+                          padding:10,
+                          fontSize:12,
+                          wordBreak:"break-word",
+                          border:"1px solid #222",
+                          borderRadius:8,
                           background:style.background,
-                          color:style.color,
-                          border:"1px solid #222"
+                          color:style.color
                         }}>
-                          {val}
+                          <div style={{ display:"flex", justifyContent:"space-between" }}>
+                            <span>{val}</span>
+                            {style.arrow && <span>{style.arrow}</span>}
+                          </div>
                         </td>
                       )
                     })}
@@ -323,10 +359,13 @@ export default function Home() {
             <div style={{
               background:"#111",
               padding:20,
-              borderRadius:10
+              borderRadius:12,
+              border:"1px solid #14b8a6"
             }}>
-              <h2>{won ? "Correct!" : "Answer"}</h2>
-              <p>{target.name}</p>
+              <h2 style={{ color:"#14b8a6" }}>
+                {won ? "You got it!" : "Player Revealed"}
+              </h2>
+              <p><strong>{target.name}</strong></p>
               <button onClick={()=>setShowModal(false)}>Close</button>
             </div>
           </div>
