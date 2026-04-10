@@ -178,12 +178,19 @@ export default function Home() {
             { color: "#6b7280", text: "Incorrect" }
           ].map((item) => (
             <div key={item.text} style={{
-              border: `2px solid ${item.color}`,
-              padding: "6px 12px",
-              borderRadius: 6,
-              fontSize: 10,
-              color: item.color
+              display: "flex",
+              alignItems: "center",
+              gap: 6,
+              fontSize: 11,
+              color: "#aaa"
             }}>
+              <span style={{
+                width: 10,
+                height: 10,
+                borderRadius: "50%",
+                background: item.color,
+                flexShrink: 0
+              }} />
               {item.text}
             </div>
           ))}
