@@ -17,8 +17,11 @@ export default function Home() {
   const [showModal, setShowModal] = useState(false)
   const [isMobile, setIsMobile] = useState(false)
 
-  const [selectedLeague, setSelectedLeague] = useState("NFL")
-  const [selectedDifficulty, setSelectedDifficulty] = useState(1)
+  const [selectedLeague, setSelectedLeague] = useState<string | null>(null)
+  const [selectedDifficulty, setSelectedDifficulty] = useState<number | null>(null)
+  const [gameStarted, setGameStarted] = useState(false)
+
+  const gameReady = selectedLeague !== null && selectedDifficulty !== null
 
   const [target, setTarget] = useState<Player | null>(null)
 
@@ -30,27 +33,24 @@ export default function Home() {
     return () => window.removeEventListener("resize", check)
   }, [])
 
-  // 🎯 TARGET LOGIC
-  useEffect(() => {
-    const filteredPool = pool.filter(
-      (p) =>
-        p.league === selectedLeague &&
-        p.difficulty === selectedDifficulty
-    )
+  // 🎯 START GAME
+  function handleStartGame() {
+    if (!selectedLeague || !selectedDifficulty) return
 
+    const filteredPool = pool.filter(
+      (p) => p.league === selectedLeague && p.difficulty === selectedDifficulty
+    )
     const ids = new Set(filteredPool.map((p) => p.playerId))
     const eligible = allPlayers.filter((p) => ids.has(p.id))
-
     if (!eligible.length) return
 
-    const random =
-      eligible[Math.floor(Math.random() * eligible.length)]
-
+    const random = eligible[Math.floor(Math.random() * eligible.length)]
     setTarget(random)
     setGuesses([])
     setGameOver(false)
     setWon(false)
-  }, [selectedLeague, selectedDifficulty])
+    setGameStarted(true)
+  }
 
   // 🔍 SEARCH
   const filteredPlayers = useMemo(() => {
@@ -189,149 +189,193 @@ export default function Home() {
           ))}
         </div>
 
-        {/* CONTROLS */}
-        <div style={{ marginBottom: 16 }}>
-
-          <div style={{ textAlign: "center", fontSize: 12, color: "#888", marginBottom: 6 }}>
-            Select a League
-          </div>
-
-          <div style={{ display: "flex", justifyContent: "center", gap: 8, flexWrap: "wrap" }}>
+        {/* GAME STATUS BAR — visible once game is running */}
+        {gameStarted && (
+          <div style={{ display: "flex", justifyContent: "center", gap: 8, marginBottom: 16 }}>
             {[
-              { name: "NFL", logo: "/nfl_logo.png", enabled: true },
-              { name: "NBA", logo: "/nba_logo.png", enabled: false },
-              { name: "MLB", logo: "/mlb_logo.png", enabled: false },
-
-            
-            ].map((league) => (
-              <button
-                key={league.name}
-                onClick={() => league.enabled && setSelectedLeague(league.name)}
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  gap: 6,
-                  padding: "8px 12px",
-                  borderRadius: 8,
-                  border: "1px solid #14b8a6",
-                  background: 
-                    selectedLeague === league.name ? "#14b8a6" : "transparent",
-                  color: 
-                    selectedLeague === league.name ? "#000" : "#14b8a6",
-                  opacity: league.enabled ? 1 : 0.5,
-                  cursor: league.enabled ? "pointer" : "not-allowed",
-                  fontWeight: 600
-                }}
-              >
-                <img src={league.logo} style={{ width: 16, height: 16 }} />
-                  {league.name}
-                  {!league.enabled && (
-                  <span style={{ fontSize: 10, marginLeft: 4 }}>
-                  </span>
-                    )}
-            </button>
+              selectedLeague,
+              selectedDifficulty === 1 ? "Easy" : selectedDifficulty === 2 ? "Medium" : "Hard"
+            ].map((label) => (
+              <span key={label} style={{
+                fontSize: 12,
+                fontWeight: 600,
+                color: "#14b8a6",
+                background: "rgba(20,184,166,0.1)",
+                border: "1px solid rgba(20,184,166,0.3)",
+                borderRadius: 20,
+                padding: "4px 14px"
+              }}>
+                {label}
+              </span>
             ))}
           </div>
+        )}
 
-          <div style={{ textAlign: "center", fontSize: 12, color: "#888", margin: "10px 0 6px" }}>
-            Choose Difficulty
-          </div>
+        {/* CONTROLS — visible only before game starts */}
+        {!gameStarted && (
+          <div style={{ marginBottom: 16 }}>
 
-          <div
-          style={{
-          position: "relative", // 🔥 enables absolute positioning
-          margin: "16px 0"
-            }}
-          >
+            <div style={{ textAlign: "center", fontSize: 13, fontWeight: 700, color: selectedLeague ? "#fff" : "#ccc", marginBottom: 6 }}>
+              Step 1: Select a League
+              {selectedLeague && (
+                <span style={{ color: "#14b8a6", fontWeight: 400, marginLeft: 8 }}>· {selectedLeague}</span>
+              )}
+            </div>
 
-  {/* Difficulty Buttons (centered, untouched) */}
-  <div
-    style={{
-      display: "flex",
-      justifyContent: "center",
-      alignItems: "center",
-      gap: 14,
-      flexWrap: "wrap"
-    }}
-  >
-    {[1, 2, 3].map((d) => (
-      <button
-        key={d}
-        onClick={() => setSelectedDifficulty(d)}
-        style={{
-          padding: "10px 14px",
-          borderRadius: 10,
-          border: "1px solid #14b8a6",
-          background:
-            selectedDifficulty === d ? "#14b8a6" : "transparent",
-          color:
-            selectedDifficulty === d ? "#000" : "#14b8a6",
-          fontWeight: 600
-        }}
-      >
-        {d === 1 ? "Easy" : d === 2 ? "Medium" : "Hard"}
-      </button>
-    ))}
-  </div>
-  </div>
-
-  {/* Give Up (independent position) */}
-  <button
-    onClick={() => {
-      const confirmed = confirm("Are you sure you want to give up?")
-      if (!confirmed) return
-
-      setGameOver(true)
-      setShowModal(true)
-    }}
-    style={{
-      display: "block",
-      margin: "16px auto",
-      padding: "14px 16px",
-      borderRadius: 10,
-      border: "1px solid #727272ff",
-      background: "#c76a64ff",
-      color: "#ffffffff",
-      fontWeight: 600
-    }}
-  >
-    Give Up 😩
-  </button>
-</div>
-        <div style={{ position: "relative" }}>
-          <input
-            value={query}
-            onChange={(e) => setQuery(e.target.value)}
-            placeholder="Search player..."
-            style={{
-              width: "100%",
-              padding: 14,
-              borderRadius: 10,
-              border: "1px solid #14b8a6",
-              background: "#111",
-              color: "#fff"
-            }}
-          />
-
-          {query && filteredPlayers.length > 0 && (
-            <div style={{
-              position: "absolute",
-              width: "100%",
-              background: "#111",
-              border: "1px solid #14b8a6",
-              borderRadius: 10,
-              marginTop: 6
-            }}>
-              {filteredPlayers.map((p) => (
-                <div key={p.id} onClick={() => handleSelectPlayer(p)} style={{ padding: 12 }}>
-                  {p.name}
-                </div>
+            <div style={{ display: "flex", justifyContent: "center", gap: 8, flexWrap: "wrap" }}>
+              {[
+                { name: "NFL", logo: "/nfl_logo.png", enabled: true },
+                { name: "NBA", logo: "/nba_logo.png", enabled: false },
+                { name: "MLB", logo: "/mlb_logo.png", enabled: false },
+              ].map((league) => (
+                <button
+                  key={league.name}
+                  onClick={() => league.enabled && setSelectedLeague(league.name)}
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    gap: 6,
+                    padding: "8px 16px",
+                    borderRadius: 8,
+                    border: "2px solid #14b8a6",
+                    background: selectedLeague === league.name
+                      ? "#14b8a6"
+                      : "rgba(20, 184, 166, 0.08)",
+                    color: selectedLeague === league.name ? "#000" : "#14b8a6",
+                    opacity: league.enabled ? 1 : 0.4,
+                    cursor: league.enabled ? "pointer" : "not-allowed",
+                    fontWeight: 600,
+                    boxShadow: selectedLeague === league.name
+                      ? "0 0 0 2px rgba(20,184,166,0.35)"
+                      : "0 1px 3px rgba(0,0,0,0.4)"
+                  }}
+                >
+                  <img src={league.logo} style={{ width: 16, height: 16 }} />
+                  {league.name}
+                </button>
               ))}
             </div>
-          )}
-        </div>
+
+            <div style={{ textAlign: "center", fontSize: 13, fontWeight: 700, color: selectedDifficulty ? "#fff" : "#ccc", margin: "14px 0 6px" }}>
+              Step 2: Choose Game Difficulty
+              {selectedDifficulty && (
+                <span style={{ color: "#14b8a6", fontWeight: 400, marginLeft: 8 }}>
+                  · {selectedDifficulty === 1 ? "Easy" : selectedDifficulty === 2 ? "Medium" : "Hard"}
+                </span>
+              )}
+            </div>
+
+            <div style={{ display: "flex", justifyContent: "center", alignItems: "center", gap: 14, flexWrap: "wrap", margin: "12px 0" }}>
+              {[1, 2, 3].map((d) => (
+                <button
+                  key={d}
+                  onClick={() => setSelectedDifficulty(d)}
+                  style={{
+                    padding: "10px 20px",
+                    borderRadius: 10,
+                    border: "2px solid #14b8a6",
+                    background: selectedDifficulty === d
+                      ? "#14b8a6"
+                      : "rgba(20, 184, 166, 0.08)",
+                    color: selectedDifficulty === d ? "#000" : "#14b8a6",
+                    fontWeight: 600,
+                    cursor: "pointer",
+                    boxShadow: selectedDifficulty === d
+                      ? "0 0 0 2px rgba(20,184,166,0.35)"
+                      : "0 1px 3px rgba(0,0,0,0.4)"
+                  }}
+                >
+                  {d === 1 ? "Easy" : d === 2 ? "Medium" : "Hard"}
+                </button>
+              ))}
+            </div>
+
+            {gameReady && (
+              <button
+                onClick={handleStartGame}
+                style={{
+                  display: "block",
+                  margin: "20px auto 4px",
+                  padding: "14px 48px",
+                  borderRadius: 10,
+                  border: "none",
+                  background: "#f97316",
+                  color: "#fff",
+                  fontWeight: 700,
+                  fontSize: 15,
+                  cursor: "pointer",
+                  boxShadow: "0 0 0 2px rgba(249,115,22,0.35)"
+                }}
+              >
+                Start Game
+              </button>
+            )}
+          </div>
+        )}
+
+        {/* GIVE UP — visible only during active game */}
+        {gameStarted && !gameOver && (
+          <button
+            onClick={() => {
+              const confirmed = confirm("Are you sure you want to give up?")
+              if (!confirmed) return
+              setGameOver(true)
+              setShowModal(true)
+            }}
+            style={{
+              display: "block",
+              margin: "0 auto 16px",
+              padding: "10px 20px",
+              borderRadius: 10,
+              border: "1px solid #727272",
+              background: "#c76a64",
+              color: "#fff",
+              fontWeight: 600,
+              cursor: "pointer"
+            }}
+          >
+            Give Up 😩
+          </button>
+        )}
+
+        {/* SEARCH — visible only during active game */}
+        {gameStarted && (
+          <div style={{ position: "relative" }}>
+            <input
+              value={query}
+              onChange={(e) => setQuery(e.target.value)}
+              placeholder="Search player..."
+              style={{
+                width: "100%",
+                padding: 14,
+                borderRadius: 10,
+                border: "1px solid #14b8a6",
+                background: "#111",
+                color: "#fff"
+              }}
+            />
+
+            {query && filteredPlayers.length > 0 && (
+              <div style={{
+                position: "absolute",
+                width: "100%",
+                background: "#111",
+                border: "1px solid #14b8a6",
+                borderRadius: 10,
+                marginTop: 6,
+                zIndex: 10
+              }}>
+                {filteredPlayers.map((p) => (
+                  <div key={p.id} onClick={() => handleSelectPlayer(p)} style={{ padding: 12, cursor: "pointer" }}>
+                    {p.name}
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+        )}
         {/* TABLE — desktop */}
-        {!isMobile && (
+        {gameStarted && !isMobile && (
         <div style={{ width: "100%", overflowX: "auto" }}>
   <table
     style={{
@@ -471,7 +515,7 @@ export default function Home() {
         )}
 
         {/* CARDS — mobile */}
-        {isMobile && (
+        {gameStarted && isMobile && (
           <div style={{ display: "flex", flexDirection: "column", gap: 10, marginTop: 16 }}>
             {[...Array(8)].map((_, i) => {
               const player = guesses[i]
@@ -617,7 +661,10 @@ export default function Home() {
       </div>
 
       <button
-        onClick={() => setShowModal(false)}
+        onClick={() => {
+          setShowModal(false)
+          setGameStarted(false)
+        }}
         style={{
           marginTop: 16,
           padding: "8px 12px",
