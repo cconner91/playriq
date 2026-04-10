@@ -1,39 +1,62 @@
 export default function About() {
   return (
-    <div style={{ padding: 20, color: "white", background: "#0a0a0a", minHeight: "100vh" }}>
+    <div
+      style={{
+        padding: "20px",
+        color: "white",
+        background: "#0a0a0a",
+        minHeight: "100vh",
+        maxWidth: "800px",
+        margin: "0 auto",
+        lineHeight: 1.6,
+      }}
+    >
       <h1>How to Play</h1>
-      <p>The goal of PlayrIQ is to guess the former or current player based on various categories which include an 
-        assortment of player’s personal attributes such as the year they were drafted, their position, their college team 
-        and then various player career statistical categories . Using a player pool randomizer, PlayrIQ will determine the 
-        target player.</p>
-        
-    <p> A user will guess a player in the specific sport mode (NFL, NBA, MLB) they’re playing.  
 
-        Upon that guess, PlayrIQ will reveal results for each category. There will be numerical categories 
-        such as Age, Draft Year, Jersey Number, and the various statistical categories. These numerical 
-        categories will reveal an Over, Under or Correct referencing the values of the target player. 
-        If the guess is within a threshold, it will also render a yellow highlight over that particular category 
-        box indicating that the guessed player’s attribute is “close” to the target player’s attribute. </p>
+      <p>
+        The goal of PlayrIQ is to guess the former or current player based on various
+        categories such as draft year, position, college team, and career stats.
+        A random player is selected as the target.
+      </p>
 
+      <p>
+        After each guess, results are revealed for each category. Numerical values
+        (Age, Draft Year, Jersey Number, stats) will show:
+      </p>
 
-       <h2>##PlayrIQ has two game modes:</h2>
+      <ul>
+        <li><strong>Correct</strong> – exact match</li>
+        <li><strong>Over</strong> – higher than target</li>
+        <li><strong>Under</strong> – lower than target</li>
+      </ul>
 
-    <h3>Daily Play:</h3>
-        <p> PlayrIQ will have a target player selected once per day which will be the same for all users 
-        which is in The Daily Play Center. This game will contain the same categories and amount of guesses for all users. 
-        Users will be able to retain their statistics which include streaks, average number of guesses, success rates etc…</p>
-        
-        <p>***** EVENTUALLY WE WILL HAVE MULTIPLE DAILY MODES INCLUDING 4 DIFFICULTY RATINGS and DIFFERENT SPORTS INCLUDING MULTI SPORT</p>
+      <p>
+        Close guesses are highlighted in yellow to indicate proximity.
+      </p>
 
-   <h3>##Challenge Mode:</h3> 
-    <p>PlayrIQ’s ‘Challenge Mode’ allows users to customize their game settings and challenge other users. 
-        In Challenge Mode users can play multiple times per day.</p>
+      <h2>Game Modes</h2>
 
-        <p>In Challenge Mode, users may also customize their game settings, choosing a single 
-            sport (or a unique combination of sports e.g. MLB & NBA or NFL, MLB & NBA).</p>
-            
-        <p>They may also customize the difficulty, the categories to be used, and the number of guesses allowed for 
-            that game. .</p>
+      <h3>Daily Play</h3>
+      <p>
+        One player per day, same for all users. Track stats like streaks and
+        average guesses.
+      </p>
+
+      <p style={{ color: "#facc15", fontWeight: "bold" }}>
+        Future: multiple difficulties and multi-sport modes.
+      </p>
+
+      <h3>Challenge Mode</h3>
+      <p>
+        Customize your game and play multiple times per day.
+      </p>
+
+      <ul>
+        <li>Choose single or multiple sports</li>
+        <li>Select difficulty</li>
+        <li>Pick categories</li>
+        <li>Set number of guesses</li>
+      </ul>
     </div>
-  )
+  );
 }

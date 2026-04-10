@@ -157,7 +157,7 @@ export default function Home() {
         </div>
 
         {/* SUBTITLE */}
-        <p style={{ textAlign: "center", fontSize: 16, color: "#ffffffff", marginBottom: 12 }}>
+        <p style={{ textAlign: "center", fontSize: 18, color: "#ffffffff", marginBottom: 12 }}>
           Guess the player in 8 tries or less
         </p>
         <p style={{ textAlign: "center", fontSize: 12, color: "#aaaaaacd", marginBottom: 8 }}>
@@ -195,6 +195,12 @@ export default function Home() {
             </div>
           ))}
         </div>
+
+        <p style={{ textAlign: "center", fontSize: 12, color: "#888", marginBottom: 24, lineHeight: 1.6 }}>
+          After each guess, that player's attributes are revealed and color-coded to show
+          how they compare to the{" "}
+          <span style={{ fontWeight: 700, textDecoration: "underline", color: "#ccc" }}>target player</span>.
+        </p>
 
         {/* GAME STATUS BAR — visible once game is running */}
         {gameStarted && (
@@ -319,7 +325,6 @@ export default function Home() {
             )}
           </div>
         )}
-
         {/* GIVE UP — visible only during active game */}
         {gameStarted && !gameOver && (
           <button
@@ -347,11 +352,21 @@ export default function Home() {
 
         {/* SEARCH — visible only during active game */}
         {gameStarted && (
+          <div>
+            <p style={{ textAlign: "center", fontSize: 13, color: "#aaa", marginBottom: 6 }}>
+              Type an {selectedLeague} player's name below to make your {guesses.length === 0 ? "first" : "next"} guess
+            </p>
+            <div style={{ textAlign: "center", fontSize: 12, color: "#555", marginBottom: 10 }}>
+              {guesses.length} / 8 guesses used
+            </div>
+          </div>
+        )}
+        {gameStarted && (
           <div style={{ position: "relative" }}>
             <input
               value={query}
               onChange={(e) => setQuery(e.target.value)}
-              placeholder="Search player..."
+              placeholder="Search by player name"
               style={{
                 width: "100%",
                 padding: 14,
