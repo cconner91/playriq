@@ -530,12 +530,12 @@ export default function Home() {
               const attrs: { label: string; key: string; guessVal: any; displayVal: any }[] = [
                 { label: "Player",    key: "name",          guessVal: player?.name,         displayVal: player?.name },
                 { label: "Team",      key: "team",          guessVal: player?.team,         displayVal: player?.team },
-                { label: "Pos",       key: "position",      guessVal: player?.position,     displayVal: player?.position?.[0] },
+                { label: "Pos.",      key: "position",      guessVal: player?.position,     displayVal: player?.position?.[0] },
                 { label: "Age",       key: "age",           guessVal: player?.age,          displayVal: player?.age },
                 { label: "College",   key: "college",       guessVal: player?.college,      displayVal: player?.college?.split(";").pop()?.trim() },
                 { label: "Draft Yr",  key: "draftYear",     guessVal: player?.draftYear,    displayVal: player?.draftYear },
                 { label: "Pick",      key: "draftPick",     guessVal: player?.draftPick,    displayVal: player?.draftPick },
-                { label: "#",         key: "jersey_number", guessVal: player?.jersey_number, displayVal: player?.jersey_number },
+                { label: "Jers. #",   key: "jersey_number", guessVal: player?.jersey_number, displayVal: player?.jersey_number },
               ]
 
               const getStyle = (attr: typeof attrs[0]) =>
