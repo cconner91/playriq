@@ -29,6 +29,7 @@
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts",
     "**/*.mts"
-  ],
+, "scripts/convertPlayers.js"  ],
   "exclude": ["node_modules"]
 }
+

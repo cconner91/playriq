@@ -15,11 +15,20 @@ export default function Home() {
   const [gameOver, setGameOver] = useState(false)
   const [won, setWon] = useState(false)
   const [showModal, setShowModal] = useState(false)
+  const [isMobile, setIsMobile] = useState(false)
 
   const [selectedLeague, setSelectedLeague] = useState("NFL")
   const [selectedDifficulty, setSelectedDifficulty] = useState(1)
 
   const [target, setTarget] = useState<Player | null>(null)
+
+  // 📱 MOBILE DETECTION
+  useEffect(() => {
+    const check = () => setIsMobile(window.innerWidth < 640)
+    check()
+    window.addEventListener("resize", check)
+    return () => window.removeEventListener("resize", check)
+  }, [])
 
   // 🎯 TARGET LOGIC
   useEffect(() => {
@@ -140,16 +149,16 @@ export default function Home() {
         </div>
       </div>
 
-      <div style={{ maxWidth: 1100, margin: "0 auto", padding: 16 }}>
+      <div style={{ maxWidth: 1100, margin: "0 auto", padding: "8px 16px 16px" }}>
 
         {/* LOGO */}
-        <div style={{ display: "flex", justifyContent: "center", marginBottom: 10 }}>
+        <div style={{ display: "flex", justifyContent: "center", marginBottom: 4 }}>
           <img src="/main_logo.png" style={{ width: 200 }} />
         </div>
 
         {/* SUBTITLE */}
-        <p style={{ textAlign: "center", fontSize: 16, color: "#ffffffff", marginBottom: 25 }}>
-          Guess the player in 8 tries or less 
+        <p style={{ textAlign: "center", fontSize: 16, color: "#ffffffff", marginBottom: 12 }}>
+          Guess the player in 8 tries or less
         </p>
         <p style={{ textAlign: "center", fontSize: 12, color: "#aaaaaacd", marginBottom: 8 }}>
           The attribute/statistic of each guess will be reflected with the following colors:
@@ -276,13 +285,9 @@ export default function Home() {
       setShowModal(true)
     }}
     style={{
-      position: "relative",
-      maxWidth: 400,
+      display: "block",
       margin: "16px auto",
-      top: "50%",
-      transform: "translateY(-50%)",
-
-      padding: "14px 16px", 
+      padding: "14px 16px",
       borderRadius: 10,
       border: "1px solid #727272ff",
       background: "#c76a64ff",
@@ -325,7 +330,8 @@ export default function Home() {
             </div>
           )}
         </div>
-        {/* TABLE */}
+        {/* TABLE — desktop */}
+        {!isMobile && (
         <div style={{ width: "100%", overflowX: "auto" }}>
   <table
     style={{
@@ -438,7 +444,7 @@ export default function Home() {
                     </span>
 
                     {style.arrow && (
-                      <span 
+                      <span
                         style={{
                           position: "absolute",
                           right: 6,
@@ -462,6 +468,103 @@ export default function Home() {
     </tbody>
   </table>
 </div>
+        )}
+
+        {/* CARDS — mobile */}
+        {isMobile && (
+          <div style={{ display: "flex", flexDirection: "column", gap: 10, marginTop: 16 }}>
+            {[...Array(8)].map((_, i) => {
+              const player = guesses[i]
+
+              const attrs: { label: string; key: string; guessVal: any; displayVal: any }[] = [
+                { label: "Player",    key: "name",          guessVal: player?.name,         displayVal: player?.name },
+                { label: "Team",      key: "team",          guessVal: player?.team,         displayVal: player?.team },
+                { label: "Pos",       key: "position",      guessVal: player?.position,     displayVal: player?.position?.[0] },
+                { label: "Age",       key: "age",           guessVal: player?.age,          displayVal: player?.age },
+                { label: "College",   key: "college",       guessVal: player?.college,      displayVal: player?.college?.split(";").pop()?.trim() },
+                { label: "Draft Yr",  key: "draftYear",     guessVal: player?.draftYear,    displayVal: player?.draftYear },
+                { label: "Pick",      key: "draftPick",     guessVal: player?.draftPick,    displayVal: player?.draftPick },
+                { label: "#",         key: "jersey_number", guessVal: player?.jersey_number, displayVal: player?.jersey_number },
+              ]
+
+              const getStyle = (attr: typeof attrs[0]) =>
+                player && target
+                  ? getCellStyle(attr.key, attr.guessVal, target[attr.key])
+                  : { background: "#111", color: "#fff", arrow: "" }
+
+              const cellBase = (flex = 1): React.CSSProperties => ({
+                flex,
+                textAlign: "center",
+                padding: "8px 4px",
+                fontSize: 12,
+              })
+
+              const nameStyle = getStyle(attrs[0])
+
+              return (
+                <div key={i} style={{ border: "1px solid #222", borderRadius: 10, overflow: "hidden" }}>
+
+                  {/* Row 1: Player name */}
+                  <div style={{
+                    background: nameStyle.background,
+                    color: nameStyle.color,
+                    padding: "10px 14px",
+                    fontSize: 15,
+                    fontWeight: 600,
+                    textAlign: "center",
+                    minHeight: 42,
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center"
+                  }}>
+                    {attrs[0].displayVal ?? (
+                      <span style={{ color: "#444", fontWeight: 400, fontSize: 13 }}>Guess {i + 1}</span>
+                    )}
+                  </div>
+
+                  {/* Row 2: Team | Pos | Age */}
+                  <div style={{ display: "flex", borderTop: "1px solid #222" }}>
+                    {attrs.slice(1, 4).map((attr, j) => {
+                      const s = getStyle(attr)
+                      return (
+                        <div key={j} style={{
+                          ...cellBase(),
+                          background: s.background,
+                          color: s.color,
+                          borderLeft: j > 0 ? "1px solid #222" : "none",
+                        }}>
+                          <div style={{ color: "#888", fontSize: 9, marginBottom: 2 }}>{attr.label}</div>
+                          <div>{attr.displayVal}{s.arrow && <span style={{ marginLeft: 3 }}>{s.arrow}</span>}</div>
+                        </div>
+                      )
+                    })}
+                  </div>
+
+                  {/* Row 3: College | Draft Yr | Pick | Jersey # */}
+                  <div style={{ display: "flex", borderTop: "1px solid #222" }}>
+                    {attrs.slice(4).map((attr, j) => {
+                      const s = getStyle(attr)
+                      return (
+                        <div key={j} style={{
+                          ...cellBase(),
+                          background: s.background,
+                          color: s.color,
+                          borderLeft: j > 0 ? "1px solid #222" : "none",
+                        }}>
+                          <div style={{ color: "#888", fontSize: 9, marginBottom: 2 }}>{attr.label}</div>
+                          <div style={{ overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>
+                            {attr.displayVal}{s.arrow && <span style={{ marginLeft: 3 }}>{s.arrow}</span>}
+                          </div>
+                        </div>
+                      )
+                    })}
+                  </div>
+
+                </div>
+              )
+            })}
+          </div>
+        )}
 
 {/* MODAL */}
 {showModal && target && (
