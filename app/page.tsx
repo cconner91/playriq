@@ -207,7 +207,7 @@ export default function Home() {
           <div style={{ display: "flex", justifyContent: "center", gap: 8, marginBottom: 16 }}>
             {[
               selectedLeague,
-              selectedDifficulty === 1 ? "Easy" : selectedDifficulty === 2 ? "Medium" : "Hard"
+              selectedDifficulty === 1 ? "Rookie" : selectedDifficulty === 2 ? "All-Star" : "Hall of Fame"
             ].map((label) => (
               <span key={label} style={{
                 fontSize: 12,
@@ -273,7 +273,7 @@ export default function Home() {
               Step 2: Choose Game Difficulty
               {selectedDifficulty && (
                 <span style={{ color: "#14b8a6", fontWeight: 400, marginLeft: 8 }}>
-                  · {selectedDifficulty === 1 ? "Easy" : selectedDifficulty === 2 ? "Medium" : "Hard"}
+                  · {selectedDifficulty === 1 ? "Rookie" : selectedDifficulty === 2 ? "All-Star" : "Hall of Fame"}
                 </span>
               )}
             </div>
@@ -298,7 +298,12 @@ export default function Home() {
                       : "0 1px 3px rgba(0,0,0,0.4)"
                   }}
                 >
-                  {d === 1 ? "Easy" : d === 2 ? "Medium" : "Hard"}
+                  <div style={{ lineHeight: 1.2 }}>
+                    <div>{d === 1 ? "Rookie" : d === 2 ? "All-Star" : "Hall of Fame"}</div>
+                    <div style={{ fontSize: 10, fontWeight: 400, opacity: 0.75, marginTop: 3 }}>
+                      {d === 1 ? "(easy)" : d === 2 ? "(difficult)" : "(extremely difficult)"}
+                    </div>
+                  </div>
                 </button>
               ))}
             </div>
